@@ -95,6 +95,7 @@ class HomeController extends Controller
     {
         $members = DB::table('members')
             ->select('members.*')
+            ->where('members.publication_status', 1)
             ->get();
         return view('frontend.manages.members',['members'=>$members]);
     }

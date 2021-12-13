@@ -81,7 +81,7 @@
                     <img id="preview-image"
                          src="{{isset($banner->banner_image) && strlen($banner->banner_image)>3? asset($banner->banner_image): null}}"
                          alt="office logo preview" style="max-width: 100px; height: 100px; margin: 10px 0;">
-                    <input type="file" class="form-control" id="image" name="image">
+                    <input type="file" class="form-control" id="image" name="banner_image">
                 </div>
             </div>
         @endif

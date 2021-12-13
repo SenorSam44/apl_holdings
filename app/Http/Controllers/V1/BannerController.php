@@ -143,17 +143,17 @@ class BannerController extends Controller
             return redirect()->back()->with('msg','Banner added with video database successfully!');
         }
 
-//        if ($request->hasFile('banner_image')) {
-//            $image = $request->file('banner_image');
-//            $name = $id.'.'.$image->getClientOriginalExtension();
-//            $destinationPath = public_path('uploaded_images/banners');
-//            $image->move($destinationPath, $name);
-//
-//            $totalPathName = 'uploaded_images/banners/'.$name;
-//            $banners['banner_image'] = $totalPathName;
-//            $success = DB::table('banners')->where('id','=',$id)->update($banners);
-//            return redirect()->back()->with('msg','Banner added with image database successfully!');
-//        }
+        if ($request->hasFile('banner_image')) {
+            $image = $request->file('banner_image');
+            $name = $id.'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('uploaded_images/banners');
+            $image->move($destinationPath, $name);
+
+            $totalPathName = 'uploaded_images/banners/'.$name;
+            $banners['banner_image'] = $totalPathName;
+            $success = DB::table('banners')->where('id','=',$id)->update($banners);
+            return redirect()->back()->with('msg','Banner added with image database successfully!');
+        }
 
         $success = DB::table('banners')->where('id','=',$id)->update($banners);
         return redirect()->back()->with('msg','Banner added without image database successfully!');

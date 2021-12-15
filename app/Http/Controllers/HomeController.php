@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\OfficeLocation;
 use Cornford\Googlmapper\Mapper;
 use Illuminate\Http\Request;
@@ -75,7 +76,17 @@ class HomeController extends Controller
                     ->where('projects.publication_status','=','1')
                     ->where('categories.publication_status','=','1')
                     ->get();
-        return view('frontend.manages.projects',['projects'=>$projects]);
+        $categories = Category::select('categories.category_name')
+            ->join('projects','categories.id','projects.category_id' )
+            ->where('projects.publication_status','=','1')
+            ->where('categories.publication_status','=','1')
+            ->distinct()
+            ->get();
+
+        return view('frontend.manages.projects',[
+            'projects'=>$projects,
+            'categories' => $categories,
+        ]);
     }
 
     public function singleProject($id)

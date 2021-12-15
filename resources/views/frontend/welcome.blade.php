@@ -294,12 +294,15 @@
                     <div style="color: white;" >Our Team
                     </div>
                 </li>
+                <li class="fp-nav-list-item" data-target="/projects">
+                    <div style="color: white;" >Projects
+                    </div>
+                </li>
+
                 <li class="fp-nav-list-item">
                     <a href="/studio/" target="" title="Studio" class="no-auto-detection fp-nav-link  ">Studio</a>
                 </li>
-                <li class="fp-nav-list-item">
-                    <a href="/projects/" target="" title="Projects" class="no-auto-detection fp-nav-link  ">Projects</a>
-                </li>
+
                 <li class="fp-nav-list-item">
                     <a href="/news/" target="" title="News" class="no-auto-detection fp-nav-link  ">News</a>
                 </li>

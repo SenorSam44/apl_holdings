@@ -53,7 +53,9 @@
     <link rel="alternate" hreflang="zh" href="https://www.fosterandpartners.com/zh/studio/people/senior-partners/"/>
 
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{asset('/css/main.css')}}"/>
+{{--    <link type="text/css" rel="stylesheet" href="{{asset('/css/main.css')}}"/>--}}
+    <link type="text/css" rel="stylesheet" href="https://www.fosterandpartners.com/static/css/main.css?v=3"/>
+
     <link type="application/rss+xml" rel="alternate" title="Foster+Partners"
           href="https://www.fosterandpartners.com/news/rss"/>
     <link rel="manifest" href="https://www.fosterandpartners.com/manifest.json?v=3">
@@ -89,7 +91,7 @@
     {{--    override --}}
 
 </head>
-<body style="width: 100vw">
+<body>
 
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VKDJST"
@@ -275,13 +277,7 @@
 
 <div id="container-fluid">
     <div class="page">
-
-        <div style="overflow: hidden; padding-top: 74px">
-
-            @yield('content')
-
-        </div>
-
+        @yield('content')
     </div>
 </div>
 <script>

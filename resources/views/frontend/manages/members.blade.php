@@ -120,6 +120,9 @@
         .qodef-side-menu-slide-from-right .qodef-wrapper .qodef-cover {
             top: unset;
         }
+        .qodef-side-menu-slide-from-right .qodef-wrapper {
+            z-index: 0;
+        }
 
         .qodef-container, .qodef-full-width {
             padding-bottom: 2vw;

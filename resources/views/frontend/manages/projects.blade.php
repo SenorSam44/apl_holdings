@@ -458,8 +458,8 @@
                             trigger.querySelector('.arrow-down').style.transform = 'rotate(0deg)';
 
                         }
-                    })
-                })
+                    });
+                });
             </script>
 
             <div class="fp-project-types">
@@ -470,7 +470,7 @@
                                 data-width="2732"
                                 data-height="1360">
                                 <div class="fp-dominant-colour" style="background-color: #9F9D88;"></div>
-                                <a href="/projects/{{$project->id}}" class="fp-content">
+                                <div data-target="/projects/{{$project->id}}" class="fp-content nav-link">
                             <span class="fp-lazy-load-image fp-content__img is-blurred"
                                   sizes="(min-width: 768px) 50vw, 100vw"
                                   {{--                                  srcset="/media/2637191/hero_2612_fp641289.jpg?width=768&quality=85  768w,--}}
@@ -490,7 +490,7 @@
 
                                     </div>
 
-                                </a>
+                                </div>
 
                                 <div class="fp-spacer"></div>
 
@@ -861,6 +861,14 @@
             r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
         })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', () => {
+                window.location.assign(link.getAttribute('data-target'));
+            });
+        });
     </script>
 
 @endsection

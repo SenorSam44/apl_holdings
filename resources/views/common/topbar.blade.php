@@ -1,7 +1,15 @@
 <style>
+    .fp-header {
+        background-color: black!important;
+    }
+
     .fp-nav-list-item{
         cursor: pointer;
         color:white;
+    }
+
+    .fp-nav-list-item .fp-nav-link{
+        color: white!important;
     }
 
     .fp-nav-list-item .selected{

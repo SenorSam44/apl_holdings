@@ -76,7 +76,7 @@ class ProjectController extends Controller
 
                 $image = $request->file('project_image'.$i);
                 $name = $max.'-x'.$i.'.'.$image->getClientOriginalExtension();
-                $destinationPath = public_path('../../public_html/uploaded_images/projects');
+                $destinationPath = public_path('uploaded_images/projects');
                 $image->move($destinationPath, $name);
                 $totalPathName = 'uploaded_images/projects/'.$name;
                 $projects_images['project_image'.$i] = $totalPathName;
@@ -139,15 +139,15 @@ class ProjectController extends Controller
 
                 $image = $request->file('project_image'.$i);
                 $name = $max.'-x'.$i.'.'.$image->getClientOriginalExtension();
-                $destinationPath = public_path('../../public_html/uploaded_images/projects');
+                $destinationPath = public_path('uploaded_images/projects');
                 $image->move($destinationPath, $name);
                 $totalPathName = 'uploaded_images/projects/'.$name;
                 $projects_images['project_image'.$i] = $totalPathName;
+                $success = DB::table('projects_images')->where('project_id',$max)->update($projects_images);
             }
         }
 
         //print_r($projects);
-        $success = DB::table('projects_images')->where('project_id','=',$max)->update($projects_images);
         return redirect()->back()->with('msg','Project updated to database successfully!');
     }
 

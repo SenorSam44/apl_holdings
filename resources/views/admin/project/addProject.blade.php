@@ -24,7 +24,7 @@
                 ?>
 
                 <select type="text" class="form-control" id="category_id" name="category_id" required>
-                    <option value="0">Select Category</option>
+                    <option value="">Select Category</option>
                     @foreach($categories as $category)
                         <option value="{{$category->id}}">{{ $category->category_name }}</option>
                     @endforeach

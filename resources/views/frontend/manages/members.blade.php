@@ -108,7 +108,8 @@
 
         .qodef-title-holder.qodef-bg-parallax {
             background-size: cover;
-        }        </style>
+        }
+    </style>
     <noscript>
         <style> .wpb_animate_when_almost_visible {
                 opacity: 1;
@@ -121,7 +122,7 @@
             top: unset;
         }
         .qodef-side-menu-slide-from-right .qodef-wrapper {
-            z-index: 0;
+            z-index: 0!important;
         }
 
         .qodef-container, .qodef-full-width {

@@ -67,15 +67,37 @@ class HomeController extends Controller
         return view('frontend.manages.categories', ['categories' => $categories]);
     }
 
-    public function projects()
+    public function projects(Request $request)
     {
+//        dd($request->projecttype);
         $projects = DB::table('categories')
             ->join('projects', 'categories.id', '=', 'projects.category_id')
             ->join('projects_images', 'projects.id', '=', 'projects_images.project_id')
             ->select('projects.*', 'projects_images.*', 'categories.category_name')
             ->where('projects.publication_status', '=', '1')
             ->where('categories.publication_status', '=', '1')
+            ->where(function ($query) use ($request) {
+                if(isset($request->projecttype)){
+                    $query->where('categories.category_name', $request->projecttype);
+                }elseif (isset($request->isnew) && $request->isnew){
+                    $query->orderBy('created_at');
+                }elseif (isset($request->onsite) && $request->onsite){
+                    $query->orderByDesc('created_at');
+                }
+            })
             ->get();
+
+        foreach ($projects as $project) {
+            $address = explode(',', $project->address);
+            $address_part = count($address);
+            if ($address_part > 1) {
+                $short_address = $address[count($address) - 2] . ", " . $address[count($address) - 1];
+            } else {
+                $short_address = $address[count($address) - 1];
+            }
+
+            $project->short_address = $short_address;
+        }
         $categories = Category::select('categories.category_name')
             ->join('projects', 'categories.id', 'projects.category_id')
             ->where('projects.publication_status', '=', '1')
@@ -160,7 +182,25 @@ class HomeController extends Controller
             ->where('news.publication_status', 1)
             ->paginate(12);
 
-        return view('frontend.manages.news', ['news' => $news]);
+        $projects = DB::table('categories')
+            ->join('projects', 'categories.id', '=', 'projects.category_id')
+            ->join('projects_images', 'projects.id', '=', 'projects_images.project_id')
+            ->select('projects.*', 'projects_images.*', 'categories.category_name')
+            ->where('projects.publication_status', '=', '1')
+            ->where('categories.publication_status', '=', '1')
+            ->get();
+        $categories = Category::select('categories.category_name')
+            ->join('projects', 'categories.id', 'projects.category_id')
+            ->where('projects.publication_status', '=', '1')
+            ->where('categories.publication_status', '=', '1')
+            ->distinct()
+            ->get();
+
+        return view('frontend.manages.news', [
+            'news' => $news,
+            'projects' => $projects,
+            'categories' => $categories,
+        ]);
     }
 
     public function reviews()
@@ -231,12 +271,12 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.single.about');
+        return view('frontend.single.about_us');
     }
 
     public function contacts()
     {
-        return view('frontend.single.static.contacts');
+        return view('frontend.single.contacts');
     }
 
     public function moreabout()

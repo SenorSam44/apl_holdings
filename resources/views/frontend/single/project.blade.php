@@ -1,5 +1,29 @@
 @extends('layouts.userapp')
 @section('content')
+    <style>
+        body{
+            background: black;
+            color: white;
+        }
+        .fp-project-detail, .fp-section-tab, .fp-project-gallery, .pswp__scroll-wrap{
+            background: black!important;
+
+        }
+        .fp-st-link, .fp-pd-stats__dl-list .fp-pd-stats__dl-dt, .fp-pd-stats__dl-list .fp-pd-stats__dl-dd{
+            color: white!important;
+        }
+
+        .fp-st-link.selected{
+            color: #CAA65B!important;
+        }
+
+        .fp-st-pointer{
+            background: #CAA65B!important;
+        }
+        .fp-button-icon.icon-close.theme-white>.icon__i{
+            background: url(/frontend/assets/img/cross-black.svg);
+        }
+    </style>
     <section class="component fp-project-detail" data-component-name="project-detail">
 
 
@@ -65,10 +89,10 @@
 
 
         <section class="component fp-project-gallery  track-on-scroll" data-component-name="project-gallery"
-                 data-files-widths="2732,2732,2732,2732,2732,2732,2732"
-                 data-files-heights="1536,1536,1536,1534,1536,1536,1536"
+                 data-files-widths="2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732"
+                 data-files-heights="1536,1536,1536,1534,1536,1536,1536,1536,1536,1536,1534,1536,1536,1536"
                  data-gallery-files="{{$project_images_string}}"
-                 data-files-colours="#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D"
+                 data-files-colours="#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D,#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D"
                  data-track-section="unmasked_hero"
                  data-track-detail="narbo_via"
                  data-track-scroll-sub-type="gallery_inview"
@@ -218,6 +242,38 @@
                                     <li class="fp-pd-stats__dl-item">
                                         <span class="fp-pd-stats__dl-dt">Reserved water tank</span>
                                         <span class="fp-pd-stats__dl-dd">{{$project->water_reserve}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">Address</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->address}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">Occupation Type</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->occupation_type}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">Classification</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->classification}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">No of Stories</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->no_of_stories}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">No of Car Parking</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->no_of_car_parking}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">No of Lifts</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->no_of_lifts}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">No of Stairs</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->no_of_stairs}}</span>
+                                    </li>
+                                    <li class="fp-pd-stats__dl-item">
+                                        <span class="fp-pd-stats__dl-dt">No of generators</span>
+                                        <span class="fp-pd-stats__dl-dd">{{$project->no_of_generator}}</span>
                                     </li>
                                 </ul>
                             </div>

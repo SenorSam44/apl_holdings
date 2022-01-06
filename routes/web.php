@@ -78,7 +78,7 @@ Route::get('reviews/{id}', [HomeController::class, 'review']);
 
 
 //map
-Route::get('office-location', [HomeController::class, 'officeLocation']);
+Route::get('map', [HomeController::class, 'officeLocation']);
 
 Route::middleware('auth:web')->group(function () {
 	Route::prefix('admin')->group(function(){

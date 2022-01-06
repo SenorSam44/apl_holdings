@@ -68,6 +68,27 @@
             color: white;
         }
 
+        .fp-lazy-load-image.fp-content__img{
+            width: 100%!important;
+            height: auto!important;
+        }
+
+        .fp-filter-wrapper, .fp-filter-select{
+            background: black;
+            color: white;
+        }
+
+        html.theme-white .fp-navigation .fp-pulse::after, .seniorpartner .fp-navigation .fp-pulse::after, .partner .fp-navigation .fp-pulse::after, .fp-header-content-over .fp-navigation .fp-pulse::after{
+            background: white;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .fp-project-types{
+                padding-top: 130px;
+            }
+            
+        }
+
 
     </style>
     {{--    override end--}}
@@ -278,18 +299,22 @@
                     <ul class="fp-filter-options-list">
                         <li class="fp-filter-set">
                             <ul>
-                                <li class="fp-filter-option selected">
+                                <li class="fp-filter-option selected nav-link" data-target="/projects">
                                     <a class="fp-filter-link"
-                                       href="/projects/type/">
+                                       href="/projects/">
                                         All project types
                                     </a>
                                 </li>
-                                <li class="fp-filter-option "><a class="fp-filter-link"
-                                                                 href="/projects/type/?isnew=true">Recently
-                                        Completed</a></li>
-                                <li class="fp-filter-option "><a class="fp-filter-link"
-                                                                 href="/projects/type/?onsite=true">Under
-                                        Construction</a></li>
+                                <li class="fp-filter-option nav-link" data-target="/projects/?isnew=true" >
+                                    <a class="fp-filter-link" href="/projects/?isnew=true">
+                                        Recently Completed
+                                    </a>
+                                </li>
+                                <li class="fp-filter-option ">
+                                    <a class="fp-filter-link" href="/projects/?onsite=true">
+                                        Under Construction
+                                    </a>
+                                </li>
 {{--                                <li class="fp-filter-option "><a class="fp-filter-link"--}}
 {{--                                                                 href="/projects/type/?projecttype=culture">Culture</a>--}}
 {{--                                </li>--}}
@@ -298,8 +323,8 @@
                         <li class="fp-filter-set">
                             <ul>
                                 @foreach($categories as $category)
-                                    <li class="fp-filter-option "><a class="fp-filter-link"
-                                                                     href="/projects/type/?projecttype={{$category->category_name}}">{{$category->category_name}}</a>
+                                    <li class="fp-filter-option nav-link" data-target="/projects/?projecttype={{$category->category_name}}" ><a class="fp-filter-link"
+                                                                     href="/projects/?projecttype={{$category->category_name}}">{{$category->category_name}}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -477,12 +502,12 @@
                                   {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=960&quality=85  960w,--}}
                                   {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=1350&quality=85 1350w,--}}
                                   {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=1920&quality=85 1920w"--}}
-                                  srcset="{{$project->project_image1}}"
+                                  srcset="{{asset($project->project_image1)}}"
                                   alt="Amaravati masterplan"></span>
                                     <div class="fp-content-header">
                                         <div class="fp-content-header__wrapper">
 
-                                            <span class="fp-content-header__subtitle">{{$project->land_area}}</span>
+                                            <span class="fp-content-header__subtitle">{{$project->short_address}}</span>
 
                                             <span class="fp-content-header__title">{{$project->project_title}}</span>
 
@@ -836,18 +861,6 @@
 
         </div>
     </div>
-    <script>
-        var fpLocale = "en";
-    </script>
-
-
-    <div id="fb-root" data-locale="en_GB"></div>
-
-    <script src="https://www.fosterandpartners.com/static/js/vendor/modernizr.min.js?v=3"></script>
-
-    <script src="https://www.fosterandpartners.com/static/js/libs.js?v=3"></script>
-    <script src="https://www.fosterandpartners.com/static/js/main.js?v=3"></script>
-
 
     <script>
         (function (h, o, t, j, a, r) {

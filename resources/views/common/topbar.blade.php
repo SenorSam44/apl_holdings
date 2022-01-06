@@ -15,6 +15,29 @@
     .fp-nav-list-item .selected{
         font-weight: bold;
     }
+
+    .nav-link a, .fp-nav-list-item a{
+        font-size: 14px;
+        color: white!important;
+        font-weight: normal;
+    }
+
+    .fp-nav-list-item a:hover, .fp-nav-list-item a.selected{
+        color: #CAA65B!important;
+    }
+
+    @media screen and (min-width: 1024px) {
+        html.theme-white .fp-header-search .fp-hs-toggle, .seniorpartner .fp-header-search .fp-hs-toggle, .partner .fp-header-search .fp-hs-toggle, .fp-header-content-over .fp-header-search .fp-hs-toggle {
+            background: url(/frontend/assets/img/search-white.svg) center center no-repeat transparent;
+        }
+
+        html.theme-white .fp-header-search .fp-hs-term, .seniorpartner .fp-header-search .fp-hs-term, .partner .fp-header-search .fp-hs-term, .fp-header-content-over .fp-header-search .fp-hs-term{
+            color: white;
+        }
+        .fp-header-search .fp-hs-toggle{
+            top: 0;
+        }
+    }
 </style>
 
 <div class="component fp-header" data-component-name="header">
@@ -189,29 +212,29 @@
 
                 </li>
 
+                <li class="fp-nav-list-item nav-link" data-target="/about">
+                    <a href="/about" >About Us
+                    </a>
+                </li>
+
                 <li class="fp-nav-list-item nav-link" data-target="/our-team">
-                    <div class="selected">Our Team</div>
+                    <a href="/our-team">Our Team</a>
                 </li>
                 <li class="fp-nav-list-item nav-link" data-target="/projects">
-                    <div style="color: white;" >Projects
-                    </div>
+                    <a href="/projects" >Projects
+                    </a>
                 </li>
-                <li class="fp-nav-list-item">
-                    <a href="/studio/" target="" title="Studio"
-                       class="no-auto-detection fp-nav-link">Studio</a>
+
+                <li class="fp-nav-list-item nav-link" data-target="/news">
+                    <a href="/news/">News</a>
                 </li>
-                <li class="fp-nav-list-item">
-                    <a href="/news/" target="" title="News" class="no-auto-detection fp-nav-link  ">News</a>
+
+                <li class="fp-nav-list-item nav-link" data-target="/contacts">
+                    <a href="/contacts">Contact Us</a>
                 </li>
-                <li class="fp-nav-list-item">
-                    <a href="/plus/" target="" title="+Plus" class="no-auto-detection fp-nav-link  ">+Plus</a>
-                </li>
-                <li class="fp-nav-list-item">
-                    <a href="https://www.fosterandpartnerscareers.com/" target="" title="Careers"
-                       class="no-auto-detection fp-nav-link  ">Careers</a>
-                </li>
-                <li class="fp-nav-list-item">
-                    <a href="/contact/" target="" title="Contact" class="no-auto-detection fp-nav-link  ">Contact</a>
+
+                <li class="fp-nav-list-item nav-link" data-target="/map">
+                    <a href="/map">Map</a>
                 </li>
             </ul>
 
@@ -242,4 +265,6 @@
             window.location.assign(link.getAttribute('data-target'));
         });
     });
+    document.querySelector('.fp-nav-list-item[data-target='+CSS.escape(window.location.pathname)+'] a').classList.add('selected');
+
 </script>

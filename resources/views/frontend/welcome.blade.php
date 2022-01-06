@@ -75,6 +75,12 @@
             cursor: pointer;
             color:white;
         }
+
+        .nav-link a, .fp-nav-list-item a{
+            font-size: 14px;
+            color: white!important;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
@@ -290,31 +296,29 @@
 
                 </li>
 
+                <li class="fp-nav-list-item" data-target="/about">
+                    <a href="/about" >About Us
+                    </a>
+                </li>
+
                 <li class="fp-nav-list-item" data-target="/our-team">
-                    <div style="color: white;" >Our Team
-                    </div>
+                    <a href="/our-team" class="selected">Our Team</a>
                 </li>
                 <li class="fp-nav-list-item" data-target="/projects">
-                    <div style="color: white;" >Projects
-                    </div>
+                    <a href="/projects" >Projects
+                    </a>
                 </li>
 
                 <li class="fp-nav-list-item">
-                    <a href="/studio/" target="" title="Studio" class="no-auto-detection fp-nav-link  ">Studio</a>
+                    <a href="/news/">News</a>
                 </li>
 
                 <li class="fp-nav-list-item">
-                    <a href="/news/" target="" title="News" class="no-auto-detection fp-nav-link  ">News</a>
+                    <a href="/contacts">Contact Us</a>
                 </li>
+
                 <li class="fp-nav-list-item">
-                    <a href="/plus/" target="" title="+Plus" class="no-auto-detection fp-nav-link  ">+Plus</a>
-                </li>
-                <li class="fp-nav-list-item">
-                    <a href="https://www.fosterandpartnerscareers.com/" target="" title="Careers"
-                       class="no-auto-detection fp-nav-link  ">Careers</a>
-                </li>
-                <li class="fp-nav-list-item">
-                    <a href="/contact/" target="" title="Contact" class="no-auto-detection fp-nav-link  ">Contact</a>
+                    <a href="/map">Map</a>
                 </li>
             </ul>
 

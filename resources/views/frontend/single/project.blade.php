@@ -23,6 +23,12 @@
         .fp-button-icon.icon-close.theme-white>.icon__i{
             background: url(/frontend/assets/img/cross-black.svg);
         }
+        @media screen and (min-width: 1366px) {
+            .fp-project-tabs .fp-at-content {
+                padding: 20px 10vw 0;
+                font-size: 1.4rem;
+            }
+        }
     </style>
     <section class="component fp-project-detail" data-component-name="project-detail">
 
@@ -409,6 +415,14 @@
             link.addEventListener('click', () => {
                 window.location.assign(link.getAttribute('data-target'));
             });
+        });
+
+        document.querySelectorAll('circle:not(.arc)').forEach((circle)=>{
+            circle.setAttribute('fill', '#fff')
+        });
+
+        document.querySelectorAll('circle').forEach((circle)=>{
+            circle.setAttribute('stroke', '#fff')
         });
     </script>
 @endsection

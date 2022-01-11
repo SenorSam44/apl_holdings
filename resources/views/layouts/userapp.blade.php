@@ -285,7 +285,7 @@
 </script>
 
 <div id="container-fluid">
-    <div class="page">
+    <div class="page" style="background: black">
         @yield('content')
     </div>
 </div>

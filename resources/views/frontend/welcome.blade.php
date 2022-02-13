@@ -6,49 +6,8 @@
 
     <title>Architectural Design and Engineering Firm | APL Holdings</title>
 
-    {{--    <meta name="description" content="Foster and Partners are an award-winning British architectural design and engineering firm who put forward an innovative, modern and sustainable approach." />--}}
-    {{--    <meta name="keywords" content="Architectural Design and Engineering Firm" />--}}
-    {{--    <meta name="author" content="Foster + Partners / www.fosterandpartners.com" />--}}
-    {{--    <meta name="viewport" content="width=device-width, initial-scale=1" />--}}
-    {{--    <meta name="p:domain_verify" content="169c78a888f17c613fa69ba180e2e872" />--}}
-    {{--    <meta name="google-site-verification" content="cM9PcZ7R8ewsq20WCvVq1iIA-pwxAYzWHKkBp7upWtM" />--}}
-    {{--    <meta name="theme-color" content="#000000" />--}}
-    {{--    <meta name="twitter:card" content="summary_large_image" />--}}
-    {{--    <meta name="twitter:site" content="@fosterpartners" />--}}
-    {{--    <meta name="twitter:creator" content="@fosterpartners" />--}}
-    {{--    <meta property="twitter:image" content="https://www.fosterandpartners.comhttps://www.fosterandpartners.com/static/assets/images/share.jpg?width=1920&quality=85" />--}}
-    {{--    <meta property="twitter:title" content="Home | Foster + Partners" />--}}
-    {{--    <meta property="twitter:description" content="Foster and Partners are an award-winning British architectural design and engineering firm who put forward an innovative, modern and sustainable approach." />--}}
-    {{--    <meta property="fb:app_id" content="1491038140958228" />--}}
-    {{--    <meta property="og:type" content="website" />--}}
-    {{--    <meta property="og:url" content="https://www.fosterandpartners.com/" />--}}
-    {{--    <meta property="og:title" content="Home | Foster + Partners" />--}}
-    {{--    <meta property="og:description" content="Foster and Partners are an award-winning British architectural design and engineering firm who put forward an innovative, modern and sustainable approach." />--}}
-    {{--    <meta property="og:image" content="https://www.fosterandpartners.comhttps://www.fosterandpartners.com/static/assets/images/share.jpg?width=1920&quality=85" />--}}
-
-    {{--    <link rel="apple-touch-icon" href="https://www.fosterandpartners.com/static/assets/images/ico/apple-touch-icon-114-precomposed.png?v=3" />--}}
-    {{--    <link rel="apple-touch-icon" sizes="152x152" href="https://www.fosterandpartners.com/static/assets/images/ico/apple-touch-icon-144-precomposed.png?v=3" />--}}
-
-    {{--    <link rel="icon" type="image/png" sizes="16x16" href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-16x16.png?v=3" />--}}
-    {{--    <link rel="icon" type="image/png" sizes="32x32" href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-32x32.png?v=3" />--}}
-    {{--    <link rel="icon" type="image/png" sizes="192x192" href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-192x192.png?v=3" />--}}
-    {{--    <link rel="icon" type="image/png" sizes="128x128" href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-128x128.png?v=3" />--}}
-    {{--    <link rel="shortcut icon" href="/favicon.ico?v=3" />--}}
-    {{--    <link rel="canonical" href="https://www.fosterandpartners.com/" />--}}
-    {{--    <link rel="alternate" hreflang="en" href="https://www.fosterandpartners.com/" />--}}
-    {{--    <link rel="alternate" hreflang="es" href="https://www.fosterandpartners.com/es/" />--}}
-    {{--    <link rel="alternate" hreflang="ar" href="https://www.fosterandpartners.com/ar/" />--}}
-    {{--    <link rel="alternate" hreflang="zh" href="https://www.fosterandpartners.com/zh/" />--}}
-
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="https://www.fosterandpartners.com/static/css/main.css?v=3"/>
-    {{--    <link type="application/rss+xml" rel="alternate" title="Foster+Partners" href="/news/rss" />--}}
-    {{--    <link rel="manifest" href="/manifest.json?v=3">--}}
-
-<!-- CookiePro Cookies Consent Notice start for fosterandpartners.com -->
-    {{--    <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f1c2f586-2d10-443c-961e-3658d221044a"></script>--}}
-    {{--    <script type="text/javascript">function OptanonWrapper() { }</script>--}}
-    {{--    <!-- CookiePro Cookies Consent Notice end for fosterandpartners.com -->--}}
+    <link type="text/css" rel="stylesheet" href="{{asset('/static/css/main.css')}}"/>
 
     <script>
 
@@ -80,6 +39,31 @@
             font-size: 14px;
             color: white!important;
             font-weight: normal;
+        }
+        @media screen and (max-device-width: 729px){
+            .component.fp-logo{
+                width: 50vw;
+                height: auto;
+            }
+
+            .component.fp-logo .fp-svg-logo{
+                width: 35vw;
+                height: auto;
+            }
+
+            .fp-nav-list-item a{
+                font-size: 40px;
+            }
+
+            .fp-hp-figure__title{
+                font-size: 40px!important;
+            }
+            .fp-hp-figure__body{
+                font-size: 35px!important;
+            }
+            .fp-hp-figure .fp-hp-figure__title {
+                margin-bottom: 25px;
+            }
         }
     </style>
 </head>
@@ -203,7 +187,7 @@
         <span class="fp-toggle-content">
 
             <span class="fp-pulse">
-                <svg class="fp-pulse-svg" width="24" height="24" viewBox="0 0 24 24">
+                <svg class="fp-pulse-svg" width="50" height="50" viewBox="0 0 24 24">
                     <circle id="pulse" cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="1px"/>
                 </svg>
             </span>
@@ -416,11 +400,11 @@
 
 <div id="fb-root" data-locale="en_GB"></div>
 
-<script src="https://www.fosterandpartners.com/static/js/vendor/modernizr.min.js?v=3"></script>
 
-<script src="https://www.fosterandpartners.com/static/js/libs.js?v=3"></script>
 <script src="./js/app.js"></script>
-<script src="https://www.fosterandpartners.com/static/js/main.js?v=3"></script>
+<script src="{{asset('/static/js/modernizr.min.js')}}"></script>
+<script src="{{asset('/static/js/lib.js')}}"></script>
+<script src="{{asset('/static/js/main.js')}}"></script>
 
 <script>
     document.querySelectorAll('.fp-nav-list-item').forEach((link) => {
@@ -430,19 +414,7 @@
     });
 </script>
 
-{{--<script>--}}
-{{--    (function (h, o, t, j, a, r) {--}}
-{{--        h.hj = h.hj || function () {--}}
-{{--            (h.hj.q = h.hj.q || []).push(arguments)--}}
-{{--        };--}}
-{{--        h._hjSettings = {hjid: 623806, hjsv: 5};--}}
-{{--        a = o.getElementsByTagName('head')[0];--}}
-{{--        r = o.createElement('script');--}}
-{{--        r.async = 1;--}}
-{{--        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;--}}
-{{--        a.appendChild(r);--}}
-{{--    })(window, document, '/https://www.fosterandpartners.com/static.hotjar.com/c/hotjar-', '.js?sv=');--}}
-{{--</script>--}}
+
 
 </body>
 </html>

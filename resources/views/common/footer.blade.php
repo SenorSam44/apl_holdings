@@ -20,6 +20,23 @@
         }
     }
 
+    @media screen and (max-device-width: 729px){
+        .qodef-footer-top-inner.qodef-grid{
+            width: 80vw;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            padding: 0;
+        }
+
+        .qodef-column-content.qodef-grid-col-3{
+            text-align: center;
+        }
+
+        footer .widget.qodef-blog-list-widget .qodef-bl-minimal .qodef-bli-content{
+            padding-right: 0;
+        }
+    }
+
 </style>
 <footer class="qodef-page-footer ">
     <div class="qodef-footer-top-holder">
@@ -110,28 +127,17 @@
                         <div class="qodef-widget-title-holder"><h5 class="qodef-widget-title">
                                 Projects</h5>
                         </div>
+                        <?php $categories = \App\Models\Category::all() ?>
                         <div class="menu-footer-menu-one-container">
                             <ul id="menu-footer-menu-one" class="menu">
+                                @foreach($categories as $category)
                                 <li id="menu-item-589"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-589">
-                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/black-and-simple/">Urban
-                                        Landscapes</a></li>
-                                <li id="menu-item-590"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-590">
-                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/modern-space/">Architecture</a>
+                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/black-and-simple/">
+                                        {{$category->category_name}}
+                                    </a>
                                 </li>
-                                <li id="menu-item-591"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591">
-                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/home-architecture/">BooLedo
-                                        Mitam</a></li>
-                                <li id="menu-item-2413"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2413">
-                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/work-space/">Urban
-                                        Landscapes</a></li>
-                                <li id="menu-item-2415"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2415">
-                                    <a href="https://diefinnhutte.qodeinteractive.com/portfolio-item/confotrtable-place/">Architecture</a>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -155,16 +161,16 @@
                                 <li id="menu-item-2419"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2419">
                                     <a target="_blank" rel="noopener noreferrer"
-                                       href="https://www.instagram.com/qodeinteractive/">instagram</a>
+                                       href="https://www.instagram.com/qodeinteractive/">Facebook</a>
                                 </li>
                                 <li id="menu-item-2420"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2420">
                                     <a target="_blank" rel="noopener noreferrer"
-                                       href="https://twitter.com/QodeInteractive">twitter</a></li>
+                                       href="https://twitter.com/QodeInteractive">Instagram</a></li>
                                 <li id="menu-item-2421"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2421">
                                     <a target="_blank" rel="noopener noreferrer"
-                                       href="https://www.pinterest.com/qodeinteractive/">pinterest</a>
+                                       href="https://www.pinterest.com/qodeinteractive/">LinkedIn</a>
                                 </li>
                             </ul>
                         </div>

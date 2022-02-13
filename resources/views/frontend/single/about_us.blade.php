@@ -373,7 +373,7 @@
                             <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
                                 <div class="row py-3">
                                     <div class="offset-2 col-2 text-right">
-                                        <img style="height: calc(25vw - 4em);" class="w-100 mt-3"
+                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
                                              src="./frontend/assets/img/user-img-3.jpg"
                                              alt="image of building"/>
                                     </div>
@@ -435,12 +435,137 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <div style="position: relative" class="sotc-wrapper">
+                            <img style="width: 100vw; height: 100%; opacity: 0.3"
+                                 src="./frontend/assets/img/user-img-3.jpg"
+                                 alt="image of building"/>
+                            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                                 class="show-on-scroll sotc-brown-back">
+                            </div>
+                            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                                <div class="row py-3">
+                                    <div class="offset-2 col-2 text-right">
+                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                                             src="./frontend/assets/img/user-img-3.jpg"
+                                             alt="image of building"/>
+                                    </div>
+                                    <div class="pl-5 col-6">
+                                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
+                                           class="show-on-scroll text-white">
+                                            Story of the <br>Company</p>
+
+                                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of
+                                            the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text
+                                            ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type
+                                            specimen book. It has
+                                            survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining
+                                            essentially
+                                            unchanged. It was popularised in the 1960s with the release of Letraset
+                                            sheets containing
+                                            Lorem Ipsum
+                                            passages, and more recently with desktop publishing software like Aldus
+                                            PageMaker including
+                                            versions of
+                                            Lorem Ipsum.
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text
+                                            ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type
+                                            specimen book. It has
+                                            survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining
+                                            essentially
+                                            unchanged. It was popularised in the 1960s with the release of Letraset
+                                            sheets containing
+                                            Lorem Ipsum
+                                            passages, and more recently with desktop publishing software like Aldus
+                                            PageMaker including
+                                            versions of
+                                            Lorem Ipsum.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h1 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Synopsis of the<br> Company
+                    </button>
+                </h1>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div style="position: relative" class="sotc-wrapper">
+                            <img style="width: 100vw; height: 100%; opacity: 0.3"
+                                 src="./frontend/assets/img/user-img-3.jpg"
+                                 alt="image of building"/>
+                            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                                 class="show-on-scroll sotc-brown-back">
+                            </div>
+                            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                                <div class="row py-3">
+                                    <div class="offset-2 col-2 text-right">
+                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                                             src="./frontend/assets/img/user-img-3.jpg"
+                                             alt="image of building"/>
+                                    </div>
+                                    <div class="pl-5 col-6">
+                                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
+                                           class="show-on-scroll text-white">
+                                            Story of the <br>Company</p>
+
+                                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of
+                                            the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text
+                                            ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type
+                                            specimen book. It has
+                                            survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining
+                                            essentially
+                                            unchanged. It was popularised in the 1960s with the release of Letraset
+                                            sheets containing
+                                            Lorem Ipsum
+                                            passages, and more recently with desktop publishing software like Aldus
+                                            PageMaker including
+                                            versions of
+                                            Lorem Ipsum.
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text
+                                            ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type
+                                            specimen book. It has
+                                            survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining
+                                            essentially
+                                            unchanged. It was popularised in the 1960s with the release of Letraset
+                                            sheets containing
+                                            Lorem Ipsum
+                                            passages, and more recently with desktop publishing software like Aldus
+                                            PageMaker including
+                                            versions of
+                                            Lorem Ipsum.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -553,6 +678,15 @@
         //         });
         //     });
         // }
+
+        document.querySelectorAll('.accordion-button').forEach((button, index) => {
+            button.addEventListener('click', ()=> {
+                adjustingSOTCHeight();
+                // document.querySelectorAll('.accordion-item')[index].querySelectorAll('.show-on-scroll').forEach((ele) => {
+                //     ele.style.transition = 'unset';
+                // })
+            })
+        });
         function adjustingSOTCHeight() {
             document.querySelectorAll('.sotc-wrapper').forEach((wrapper) => {
                 wrapper.style.height = "calc(" + parseInt(window.getComputedStyle(wrapper.querySelector('.sotc-main-cotent')).height) + "px" + " + 2rem)";

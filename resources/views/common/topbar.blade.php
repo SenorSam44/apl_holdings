@@ -38,6 +38,11 @@
             top: 0;
         }
     }
+    @media screen and (max-device-width: 729px) {
+        html.theme-white .fp-navigation .fp-pulse::after{
+            background-color: white;
+        }
+    }
 </style>
 
 <div class="component fp-header" data-component-name="header">

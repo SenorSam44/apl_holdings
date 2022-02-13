@@ -84,6 +84,17 @@
         .page-id-1740 .qodef-page-footer .qodef-footer-bottom-holder {
             background-color: #171717;
         }
+
+        @media screen and (max-device-width: 729px) {
+            .qodef-title-inner .qodef-grid{
+                width: 100%;
+            }
+
+            .qodef-team-image img {
+                height: auto!important;
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/620a1.css"
           media="all"/>

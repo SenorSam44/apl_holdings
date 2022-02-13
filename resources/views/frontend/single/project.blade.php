@@ -29,6 +29,15 @@
                 font-size: 1.4rem;
             }
         }
+
+        @media screen and (max-device-width: 729px) {
+            .fp-project-tabs .fp-at-content {
+                margin: 0 8vw;
+            }
+            .component.fp-discipline-carousel.animate-on-scroll{
+                margin-top: 15vh;
+            }
+        }
     </style>
     <section class="component fp-project-detail" data-component-name="project-detail">
 
@@ -129,10 +138,10 @@
                  data-component-name="project-tabs">
 
             <div class="fp-select-style-1">
-                <select class="fp-project-tabs-select">
-                    <option value="description">Description</option>
-                    <option value="factsfigures">Facts and Figures</option>
-                    <option value="gallery">Gallery</option>
+                <select class="fp-project-tabs-select" style="background: black; color: white">
+                    <option style="background: black; color: white" value="description">Description</option>
+                    <option style="background: black; color: white" value="factsfigures">Facts and Figures</option>
+                    <option style="background: black; color: white" value="gallery">Gallery</option>
                 </select>
             </div>
 
@@ -288,79 +297,6 @@
                     </div>
 
                     <div class="fp-section-slide-item" data-tab="team">
-{{--                        <section class="fp-pd-stats">--}}
-{{--                            <div class="fp-team-grid">--}}
-{{--                                <div class="fp-tg-wrap">--}}
-{{--                                    <ul class="fp-tg-list">--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/grant-brooker/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Grant Brooker">Grant Brooker</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/spencer-de-grey/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Spencer de Grey">Spencer de Grey</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/andy-bow/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Andy Bow">Andy Bow</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/piers-heath/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Piers Heath">Piers Heath</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/roger-ridsdill-smith/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Roger Ridsdill Smith">Roger Ridsdill--}}
-{{--                                                Smith</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/angelika-kovacic/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Angelika Kovacic">Angelika Kovacic</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/francois-curato/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Fran&#231;ois Curato">Fran&#231;ois--}}
-{{--                                                Curato</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/hugh-stewart/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Hugh Stewart">Hugh Stewart</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="fp-tg-list-item">--}}
-{{--                                            <a class="fp-tg-link no-smoothState track-on-click"--}}
-{{--                                               href="/studio/jonathan-habert/"--}}
-{{--                                               data-track-click-sub-type="team_click"--}}
-{{--                                               data-track-click-section="main"--}}
-{{--                                               data-track-click-detail="Jonathan Habert">Jonathan Habert</a>--}}
-{{--                                        </li>--}}
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </section>--}}
                     </div>
 
                 </div>

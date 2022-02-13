@@ -13,23 +13,17 @@
 
     <meta name="description" content="View all of the practices project types, read about each individually and view the galleries." />
     <meta name="keywords" content="" />
-    <meta name="author" content="Foster + Partners / www.fosterandpartners.com" />
+    <meta name="author" content="APL Holdings / www.aplholdings.com.bd" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="p:domain_verify" content="169c78a888f17c613fa69ba180e2e872" />
     <meta name="google-site-verification" content="cM9PcZ7R8ewsq20WCvVq1iIA-pwxAYzWHKkBp7upWtM" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@fosterpartners" />
-    <meta name="twitter:creator" content="@fosterpartners" />
-    <meta property="twitter:image" content="https://www.fosterandpartners.com/static/assets/images/share.jpg?width=1920&quality=85" />
-    <meta property="twitter:title" content="Search projects by type | Foster + Partners" />
+    <meta property="twitter:title" content="Search projects by type | APL Holdings" />
     <meta property="twitter:description" content="View all of the practices project types, read about each individually and view the galleries." />
     <meta property="fb:app_id" content="1491038140958228" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.fosterandpartners.com/projects/type/" />
-    <meta property="og:title" content="Search projects by type | Foster + Partners" />
+    <meta property="og:title" content="Search projects by type | APL Holdings" />
     <meta property="og:description" content="View all of the practices project types, read about each individually and view the galleries." />
-    <meta property="og:image" content="https://www.fosterandpartners.com/static/assets/images/share.jpg?width=1920&quality=85" />
 
     <link rel="apple-touch-icon" href="/static/assets/images/ico/apple-touch-icon-114-precomposed.png?v=3" />
     <link rel="apple-touch-icon" sizes="152x152" href="/static/assets/images/ico/apple-touch-icon-144-precomposed.png?v=3" />
@@ -39,19 +33,10 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/static/assets/images/ico/favicon-192x192.png?v=3" />
     <link rel="icon" type="image/png" sizes="128x128" href="/static/assets/images/ico/favicon-128x128.png?v=3" />
     <link rel="shortcut icon" href="/favicon.ico?v=3" />
-    <link rel="canonical" href="https://www.fosterandpartners.com/projects/type/" />
-    <link rel="alternate" hreflang="en" href="https://www.fosterandpartners.com/projects/type/" />
-    <link rel="alternate" hreflang="es" href="https://www.fosterandpartners.com/es/projects/type/" />
-    <link rel="alternate" hreflang="ar" href="https://www.fosterandpartners.com/ar/projects/type/" />
-    <link rel="alternate" hreflang="zh" href="https://www.fosterandpartners.com/zh/projects/type/" />
+
 
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{asset('/static/css/main.css')}}"/>
-{{--    <link type="text/css" rel="stylesheet" href="https://www.fosterandpartners.com/static/css/main.css?v=3"/>--}}
-
-    <link type="application/rss+xml" rel="alternate" title="Foster+Partners"
-          href="https://www.fosterandpartners.com/news/rss"/>
-    <link rel="manifest" href="https://www.fosterandpartners.com/manifest.json?v=3">
 
     <script>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Project;
 use App\OfficeLocation;
 use Cornford\Googlmapper\Mapper;
 use Illuminate\Http\Request;
@@ -10,11 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
     public function index()
     {
         $banners = DB::table('banners')
@@ -77,11 +73,11 @@ class HomeController extends Controller
             ->where('projects.publication_status', '=', '1')
             ->where('categories.publication_status', '=', '1')
             ->where(function ($query) use ($request) {
-                if(isset($request->projecttype)){
+                if (isset($request->projecttype)) {
                     $query->where('categories.category_name', $request->projecttype);
-                }elseif (isset($request->isnew) && $request->isnew){
+                } elseif (isset($request->isnew) && $request->isnew) {
                     $query->orderBy('created_at');
-                }elseif (isset($request->onsite) && $request->onsite){
+                } elseif (isset($request->onsite) && $request->onsite) {
                     $query->orderByDesc('created_at');
                 }
             })
@@ -338,5 +334,21 @@ class HomeController extends Controller
         return view('frontend.single.our_location', [
             'our_locations' => $our_locations,
         ]);
+    }
+
+    public function search()
+    {
+        $query_string = request()->q;
+        $projects = Project::where('project_title', 'like', '%' . $query_string . '%')
+            ->orWhere('address', 'like', '%' . $query_string . '%')
+            ->get(['id as Id', 'project_title as Name']);
+
+        foreach ($projects as $project){
+            $project->Url = ('/projects/'.$project->Id);
+        }
+
+        $projects = $projects->toArray();
+
+        return response()->json($projects);
     }
 }

@@ -76,6 +76,7 @@ Route::get('news/{id}', [HomeController::class, 'new']);
 Route::get('services/{id}', [HomeController::class, 'service']);
 Route::get('reviews/{id}', [HomeController::class, 'review']);
 
+Route::get('search', [HomeController::class, 'search']);
 
 //map
 Route::get('map', [HomeController::class, 'officeLocation']);

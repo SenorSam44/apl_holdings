@@ -188,8 +188,6 @@
                  data-content-reference="project"
                  data-swipe-behaviour="true">
 
-                <div class="fp-section-loader"></div>
-
                 <div class="fp-section-slide-wrap">
 
                     <div class="fp-section-slide-item" data-tab="description">
@@ -341,9 +339,18 @@
             document.querySelector('.gallery-btn').click();
 
         });
+
+        let gallerySelect = document.querySelector('.fp-project-tabs-select');
+        gallerySelect.addEventListener('change', (e)=>{
+            if (e.target.value==="gallery"){
+                document.querySelector('.gallery-btn').click();
+            }
+        })
+
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelector('.fp-gallery-overlay__close .fp-button-icon.icon-close').addEventListener('click', () => {
                 document.querySelector('.fp-st-link[data-tab="description"]').click();
+                gallerySelect.options[0].selected = true;
             });
         });
 

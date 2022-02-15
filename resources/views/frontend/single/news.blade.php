@@ -40,11 +40,11 @@
     </style>
 
     <section class="blog-detail-wrap bg-dark news-start">
-        {{--        <div class="container">--}}
+
         @foreach($news as $data)
         @endforeach
-        <div class="row">
-            <div class="offset-2 col-xl-7 col-lg-6 col-10">
+        <div class="row" style="margin: 0">
+            <div class="offset-md-2 col-xl-7 col-lg-6 col-md-10 col-12">
                 <div class="blog-detail-box">
                     <div class="blog-detail-title">
                         <div class="item-img">
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        {{--        </div>--}}
+
     </section>
     <!-- All Doctors End Here -->
 

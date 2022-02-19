@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Project;
+use App\Models\Review;
 use App\OfficeLocation;
 use Cornford\Googlmapper\Mapper;
 use Illuminate\Http\Request;
@@ -267,7 +268,12 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.single.about_us');
+        $abouts = DB::table('abouts')->get();
+        $reviews = Review::all();
+        return view('frontend.single.about_us', [
+            'abouts' => $abouts,
+            'reviews' => $reviews,
+        ]);
     }
 
     public function contacts()

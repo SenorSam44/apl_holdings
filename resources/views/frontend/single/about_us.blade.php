@@ -127,7 +127,7 @@
             box-shadow: none;
         }
 
-        .accordion-item .accordion-header{
+        .accordion-item .accordion-header {
             border-style: solid;
             border-color: #cccccc;
             border-width: 1px 0;
@@ -140,12 +140,12 @@
             padding: 0 5%;
         }
 
-        .accordion-button::after{
-            background-image: url(./frontend/assets/img/plus-solid.svg)!important;
+        .accordion-button::after {
+            background-image: url(./frontend/assets/img/plus-solid.svg) !important;
         }
 
-        .accordion-button.collapsed::after{
-            background-image: url(./frontend/assets/img/minus-solid.svg)!important;
+        .accordion-button.collapsed::after {
+            background-image: url(./frontend/assets/img/minus-solid.svg) !important;
         }
 
         .accordion-header {
@@ -196,15 +196,15 @@
             width: 150px;
             border-radius: 150px;
             object-fit: cover;
-            margin:auto;
+            margin: auto;
         }
 
-        .quote{
+        .quote {
             width: 50%;
             margin: 50px auto 0;
         }
 
-        .person-name{
+        .person-name {
             margin-left: 75%;
             margin-top: 20px;
         }
@@ -218,32 +218,76 @@
         /*    opacity: 1;*/
         /*}*/
 
-        p.show-on-scroll{
+        p.show-on-scroll {
             transform: translateX(200%) scaleX(1);
             transition: transform 2s ease-in;
         }
 
-        p.show-on-scroll.is-visible{
+        p.show-on-scroll.is-visible {
             transform: unset;
         }
 
-        img.show-on-scroll{
+        img.show-on-scroll {
             transition: transform 2s ease-in;
         }
-        img.show-on-scroll:not(.is-visible){
+
+        img.show-on-scroll:not(.is-visible) {
             transform: translateX(-300%) scaleX(1);
         }
 
-        img.show-on-scroll.is-visible{
+        img.show-on-scroll.is-visible {
             transform: unset;
         }
 
-        .show-on-scroll.sotc-brown-back{
+        .show-on-scroll.sotc-brown-back {
             opacity: 0;
             transition: opacity 1s ease-in;
         }
-        .show-on-scroll.sotc-brown-back.is-visible{
+
+        .show-on-scroll.sotc-brown-back.is-visible {
             opacity: 0.7;
+        }
+
+        .about-heading {
+            font-size: 40px;
+            word-spacing: 20px;
+        }
+
+        .about-large-image {
+            height: calc(25vw - 4em);
+        }
+
+        .medium-text {
+            font-size: 16px;
+        }
+
+        .paragraph-text, .paragraph-text li {
+            font-size: 14px;
+            list-style: none;
+        }
+
+        .paragraph-text li::before {
+            content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: white; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            top: 0;
+            font-size: 22px;
+        }
+
+        /*.work-process-section*/
+
+        @media screen and (max-width: 729px) {
+            .about-heading {
+                font-size: 30px;
+                word-spacing: unset;
+            }
+
+            .about-large-image {
+                height: auto;
+                padding: 2rem;
+            }
         }
 
     </style>
@@ -261,7 +305,8 @@
         </div>
     </section>
     <div style="color: white; background: black">
-        <p style="font-size: 23px" class="text-white m-5 p-5 text-center">Lorem Ipsum is simply dummy text of the
+        <p style="font-size: 14px" class="text-white m-5 p-3 text-md-center text-justify">Lorem Ipsum is simply dummy
+            text of the
             printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
             survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
@@ -277,18 +322,20 @@
 
             </div>
             <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
-                <div class="row py-3">
-                    <div class="offset-2 col-2 text-right">
-                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                <div class="row py-md-3 py-0">
+                    <div class="offset-md-2 col-md-2 offset-0 col-12 text-right">
+                        <img class="about-large-image ml-3 ml-md-0 show-on-scroll w-100 mt-3"
                              src="./frontend/assets/img/user-img-3.jpg"
                              alt="image of building"/>
                     </div>
-                    <div class="pl-5 col-6">
-                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
-                           class="show-on-scroll text-white">
-                            Story of the <br>Company</p>
+                    <div class="pl-5 ml-md-0 ml-2 pr-md-0 pr-4 col-md-6 col-12">
+                        <p style="text-transform: uppercase; line-height: 1.4"
+                           class="about-heading show-on-scroll text-white">
+                            Story of the Company
+                        </p>
 
-                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of the
+                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is simply dummy
+                            text of the
                             printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
                             ever since the
                             1500s, when an unknown printer took a galley of type and scrambled it to make a type
@@ -308,49 +355,37 @@
 
         </div>
 
-        <div style="width: calc(100vw - 30px)" class="row my-5 p-3">
-            <div class="offset-2 col-4">
-                <h1 class="text-white">Work Process</h1>
-                <h3 class="text-white">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        <section class="work-process-section row my-5 p-3">
+            <div class="offset-md-2 offset-0 col-md-5 col-12">
+                <h2 class="about-heading text-white">Work Process</h2>
+                <h3 class="medium-text text-white">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip
                     ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</h3>
                 <div class="row tab-wrapper">
                     <ul class="col-4 tab-container">
-                        <li class="tab active">01 Mission</li>
-                        <li class="tab">02 Vision</li>
-                        <li class="tab">03 Our Values</li>
+                        @foreach($abouts as $key=>$about)
+                            <li class="tab {{$key==0? 'active': ''}} ">{{$about->about_title}}</li>
+                        @endforeach
                     </ul>
-
-                    <div class="col-8 tab-content active">
-                        printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged.
-                    </div>
-                    <div class="col-8 tab-content">
-                        00 printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged.
-
-                    </div>
-                    <div class="col-8 tab-content">
-                        01 printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into electronic
-                        typesetting, remaining essentially unchanged.
-
-                    </div>
+                    @foreach($abouts as $key=>$about)
+                        <ul class="paragraph-text col-8 tab-content {{$key==0? 'active': ''}}">
+                            <?php
+                            $description = $about->about_description;
+                            $description = preg_replace("/\r\n|\r|\n/", '</li><li>', $description);
+                            echo '<li>', $description, '</li>';
+                            ?>
+                            {{--                            {{'<li>'.preg_replace("/\r\n|\r|\n/", '</li><li>', $about->about_description).'</li>'}}--}}
+                        </ul>
+                    @endforeach
                 </div>
 
             </div>
-            <div class="col-4">
-                <img class="w-100" src="./frontend/assets/img/user-img-3.jpg"
+            <div class="col-md-3 col-12">
+                <img class="about-large-image h-100 w-100" src="./frontend/assets/img/user-img-3.jpg"
                      alt="image of building"/>
             </div>
-        </div>
+        </section>
 
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -370,19 +405,20 @@
                             <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
                                  class="show-on-scroll sotc-brown-back">
                             </div>
-                            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                            <div style="position: absolute; top: 0;" class="sotc-main-cotent">
                                 <div class="row py-3">
-                                    <div class="offset-2 col-2 text-right">
-                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
                                              src="./frontend/assets/img/user-img-3.jpg"
                                              alt="image of building"/>
                                     </div>
-                                    <div class="pl-5 col-6">
-                                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
-                                           class="show-on-scroll text-white">
-                                            Story of the <br>Company</p>
+                                    <div class="pl-5 col-md-6 col-12">
+                                        <p style="text-transform: uppercase; line-height: 1.4"
+                                           class="about-heading show-on-scroll text-white">
+                                            Story of the Company</p>
 
-                                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of
+                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
+                                            simply dummy text of
                                             the
                                             printing and typesetting industry. Lorem Ipsum has been the industry's
                                             standard dummy text
@@ -444,17 +480,19 @@
                             </div>
                             <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
                                 <div class="row py-3">
-                                    <div class="offset-2 col-2 text-right">
-                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
                                              src="./frontend/assets/img/user-img-3.jpg"
                                              alt="image of building"/>
                                     </div>
-                                    <div class="pl-5 col-6">
-                                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
-                                           class="show-on-scroll text-white">
-                                            Story of the <br>Company</p>
+                                    <div class="pl-5 col-md-6 col-12">
+                                        <p style="text-transform: uppercase; line-height: 1.4"
+                                           class="about-heading show-on-scroll text-white">
+                                            Story of the Company
+                                        </p>
 
-                                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of
+                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
+                                            simply dummy text of
                                             the
                                             printing and typesetting industry. Lorem Ipsum has been the industry's
                                             standard dummy text
@@ -516,17 +554,19 @@
                             </div>
                             <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
                                 <div class="row py-3">
-                                    <div class="offset-2 col-2 text-right">
-                                        <img style="height: calc(25vw - 4em);" class="show-on-scroll w-100 mt-3"
+                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
                                              src="./frontend/assets/img/user-img-3.jpg"
                                              alt="image of building"/>
                                     </div>
-                                    <div class="pl-5 col-6">
-                                        <p style="font-size: 40px; text-transform: uppercase; word-spacing: 20px; line-height: 1.4"
-                                           class="show-on-scroll text-white">
-                                            Story of the <br>Company</p>
+                                    <div class="pl-5 col-md-6 col-12">
+                                        <p style="text-transform: uppercase; line-height: 1.4"
+                                           class="about-heading show-on-scroll text-white">
+                                            Story of the Company
+                                        </p>
 
-                                        <p class="show-on-scroll text-white mt-3 pt-5 text-justify">Lorem Ipsum is simply dummy text of
+                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
+                                            simply dummy text of
                                             the
                                             printing and typesetting industry. Lorem Ipsum has been the industry's
                                             standard dummy text
@@ -575,36 +615,36 @@
             <h2 class="text-white text-center">What Our Clients Say</h2>
             <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60d46873321b437f2cf2f788%2FAmazon-Unveils-Its-First-Smartphone%2F1960x0.jpg%3Ffit%3Dscale"
-                             class="d-block carousel-image" alt="...">
-                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has
-                            survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p class="person-name">Jeff Bezos<br><span style="color: #cccccc">CEO of Amazon</span></p>
-
-                    </div>
+                    @foreach($reviews as $key=>$review)
+                        <div class="carousel-item {{$key==1? 'active': ''}}">
+                            <img src="{{$review->user_image}}"
+                                 class="d-block carousel-image" alt="...">
+                            <p class="quote">
+                                {{$review->review_description}}
+                            </p>
+                            <p class="person-name">{{$review->user_name}}<br><span
+                                        style="color: #cccccc">{{$review->user_designation}}</span></p>
+                        </div>
+                    @endforeach
                     <div class="carousel-item">
                         <img src="https://phantom-marca.unidadeditorial.es/c539cc91d18e6c38f9a012895541fe05/resize/660/f/webp/assets/multimedia/imagenes/2022/01/04/16412921913965.jpg"
                              class="d-block carousel-image" alt="...">
-                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum
                             has been the industry's standard dummy text ever since the 1500s, when an unknown
                             printer took a galley of type and scrambled it to make a type specimen book. It has
                             survived not only five centuries, but also the leap into electronic typesetting,
                             remaining essentially unchanged. It was popularised in the 1960s with the release of
                             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
                             publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p class="person-name">Alon Mask<br><span style="color: #cccccc" ">CEO of Amazon</span></p>
+                        <p class="person-name">Alon Mask<br><span style="color: #cccccc">CEO of Amazon</span></p>
 
                     </div>
                     <div class="carousel-item">
                         <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987"
                              class="d-block carousel-image" alt="...">
-                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum
                             has been the industry's standard dummy text ever since the 1500s, when an unknown
                             printer took a galley of type and scrambled it to make a type specimen book. It has
                             survived not only five centuries, but also the leap into electronic typesetting,
@@ -656,6 +696,7 @@
         // accordionBorderManage();
         adjustingSOTCHeight();
         tabactions();
+        handle_about_heading();
 
         // function accordionBorderManage(){
         //     document.querySelectorAll('.accordion-item .accordion-button').forEach((item, index) =>{
@@ -680,13 +721,14 @@
         // }
 
         document.querySelectorAll('.accordion-button').forEach((button, index) => {
-            button.addEventListener('click', ()=> {
+            button.addEventListener('click', () => {
                 adjustingSOTCHeight();
                 // document.querySelectorAll('.accordion-item')[index].querySelectorAll('.show-on-scroll').forEach((ele) => {
                 //     ele.style.transition = 'unset';
                 // })
             })
         });
+
         function adjustingSOTCHeight() {
             document.querySelectorAll('.sotc-wrapper').forEach((wrapper) => {
                 wrapper.style.height = "calc(" + parseInt(window.getComputedStyle(wrapper.querySelector('.sotc-main-cotent')).height) + "px" + " + 2rem)";
@@ -744,6 +786,22 @@
                 (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
                 (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
             )
+        }
+
+        function handle_about_heading() {
+            if (screen.width > 729) {
+                document.querySelectorAll('.about-heading').forEach((heading) => {
+                    let new_heading = ""
+                    let heading_texts = heading.innerHTML.split(" ").filter(text => text.length > 0)
+                    heading_texts.forEach((heading_text, index) => {
+                        new_heading += (heading_text + " ")
+                        if (index === heading_texts.length - 2) {
+                            new_heading += '<br>'
+                        }
+                    });
+                    heading.innerHTML = new_heading
+                })
+            }
         }
 
     </script>

@@ -145,7 +145,7 @@
             map = new google.maps.Map(document.querySelector(".map-wrapper"), {
                 // center: defaultLocation,
                 zoom: 12,
-                mapId: '3100bda4719d9556',
+                mapId: 'c78daa10d5a9ecd6',
             });
 
             directionsService = new google.maps.DirectionsService();
@@ -168,8 +168,9 @@
                     lng: locations[index].longitude,
                 },
                 map: map,
-                title: locations[index].name,
-                label: locations[index].name,
+                text: {"text": locations[index].name, color: "white"},
+                label: {"text": locations[index].name, color: "white"},
+
             });
 
             if (!directionsService || !directionsRenderer) {
@@ -187,6 +188,11 @@
                 travelMode: google.maps.TravelMode.DRIVING,
             };
             directionsService.route(request, function (result, status) {
+                directionsRenderer.setOptions({
+                    polylineOptions: {
+                        strokeColor: '#CAA65B'
+                    }
+                })
                 directionsRenderer.setDirections(result);
                 if (status === "ZERO_RESULTS") {
                     window.alert("Directions not found ");
@@ -207,8 +213,8 @@
                         currentMarker = new google.maps.Marker({
                             position: pos,
                             map: map,
-                            title: "Your location",
-                            label: "Your location",
+                            title: {"text": "Your location", color: "white"},
+                            label: {"text": "Your location", color: "white"},
                         });
                         map.setCenter(pos);
                         currentLocation = pos;
@@ -237,9 +243,6 @@
     <script src="http://maps.google.com/maps/api/js?key={{ config('services.google.map_key') }}&callback=initMap&libraries=&v=weekly"
             async>
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style type="text/css">
 
@@ -322,24 +325,6 @@
             color: #0d103d;
         }
 
-        /*    @media (max-width: 1600px){
-                .container-social{
-                    padding-left: 500px; padding-right: 500px;
-                }
-            }
-
-            @media (max-width: 1200px){
-                .container-social{
-                    padding-left: 350px; padding-right: 350px;
-                }
-            }
-
-            @media (max-width: 900px){
-                .container-social{
-                    padding-left: 250px; padding-right: 250px;
-                }
-            }*/
-
         @media (max-width: 768px) {
 
             .container-social{
@@ -398,10 +383,7 @@
                 color: #f5b316;
             }
 
-
         }
-
-
     </style>
 @endsection
 

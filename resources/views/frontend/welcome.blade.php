@@ -109,14 +109,14 @@
     <div class="fp-homepage-overlay component" data-component-name="homepage-overlay"></div>
 
 
-    <script src="./js/app.js"></script>
+{{--    <script src="./js/app.js"></script>--}}
 
     <script>
-        document.querySelectorAll('.fp-nav-list-item').forEach((link) => {
-            link.addEventListener('click', () => {
-                window.location.assign(link.getAttribute('data-target'));
-            });
-        });
+        // document.querySelectorAll('.fp-nav-list-item').forEach((link) => {
+        //     link.addEventListener('click', () => {
+        //         window.location.assign(link.getAttribute('data-target'));
+        //     });
+        // });
     </script>
 
 

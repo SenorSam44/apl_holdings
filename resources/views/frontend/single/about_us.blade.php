@@ -104,8 +104,9 @@
         }
 
         .tab-container .tab {
-            padding: 20px 0;
+            padding: 12px 0;
             cursor: pointer;
+            font-size: 1.2rem;
         }
 
         .tab-container .tab.active {
@@ -128,6 +129,9 @@
         }
 
         .accordion-item .accordion-header {
+            font-size: 50px;
+            padding: 20px 0;
+            line-height: 1.4;
             border-style: solid;
             border-color: #cccccc;
             border-width: 1px 0;
@@ -141,11 +145,12 @@
         }
 
         .accordion-button::after {
-            background-image: url(./frontend/assets/img/plus-solid.svg) !important;
+            background-image: url(./frontend/assets/img/minus-solid.svg) !important;
         }
 
         .accordion-button.collapsed::after {
-            background-image: url(./frontend/assets/img/minus-solid.svg) !important;
+            background-image: url(./frontend/assets/img/plus-solid.svg) !important;
+
         }
 
         .accordion-header {
@@ -164,9 +169,6 @@
         .item img {
             margin-top: 5px;
             margin-bottom: 0;
-            /*content : "";*/
-            /*width   : 150%;  !* or 100px *!*/
-            /*border-bottom:1px solid white;*/
         }
 
         .item:hover img {
@@ -248,7 +250,7 @@
             opacity: 0.7;
         }
 
-        .about-heading {
+        .about-heading, about-heading2 {
             font-size: 40px;
             word-spacing: 20px;
         }
@@ -262,8 +264,10 @@
         }
 
         .paragraph-text, .paragraph-text li {
+            padding-bottom: 10px;
             font-size: 14px;
             list-style: none;
+            line-height: 1;
         }
 
         .paragraph-text li::before {
@@ -276,10 +280,25 @@
             font-size: 22px;
         }
 
+
+        .fp-nav-list{
+            margin-top: 0;
+        }
+
         /*.work-process-section*/
 
+        .btn-primary:hover{
+            background: white;
+            color: #CAA65B;
+        }
+
         @media screen and (max-width: 729px) {
-            .about-heading {
+            .tab-container .tab {
+                padding: 8px 0;
+                font-size: 0.9rem;
+            }
+
+            .about-heading, .about-heading2 {
                 font-size: 30px;
                 word-spacing: unset;
             }
@@ -357,7 +376,7 @@
 
         <section class="work-process-section row my-5 p-3">
             <div class="offset-md-2 offset-0 col-md-5 col-12">
-                <h2 class="about-heading text-white">Work Process</h2>
+                <h2 class="about-heading2 text-white">Work Process</h2>
                 <h3 class="medium-text text-white">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip
                     ex ea commodo
@@ -382,7 +401,7 @@
 
             </div>
             <div class="col-md-3 col-12">
-                <img class="about-large-image h-100 w-100" src="./frontend/assets/img/user-img-3.jpg"
+                <img class="about-large-image w-100" style="height: auto" src="./frontend/assets/img/user-img-3.jpg"
                      alt="image of building"/>
             </div>
         </section>
@@ -392,7 +411,7 @@
                 <h1 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Synopsis of the<br> Company
+                        Story of the<br> Company
                     </button>
                 </h1>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -612,6 +631,9 @@
         </div>
 
         <div class="py-5">
+            <div class=" pl-5 clearfix">
+                <button class="btn btn-primary p-3" onclick="window.location.href='/review'">Add Review</button>
+            </div>
             <h2 class="text-white text-center">What Our Clients Say</h2>
             <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">

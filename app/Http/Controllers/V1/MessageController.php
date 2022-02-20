@@ -28,7 +28,7 @@ class MessageController extends Controller
         $messages['message'] = $request->message;
         $messages['publication_status'] = 0;
 
-        $success = DB::table('messages')->insert($messages);
+        $success = DB::table('reviews')->insert($messages);
         return redirect()->back()->with('msg','Your message has been sent to our Admin Panel, after reviewing your message we will contact you soon.');
     }
 

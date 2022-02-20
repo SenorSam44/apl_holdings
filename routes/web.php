@@ -55,7 +55,7 @@ Route::get('reviews', [HomeController::class, 'reviews']);
 Route::get('contacts', [HomeController::class, 'contacts']);
 Route::get('moreabout', [HomeController::class, 'moreabout']);
 
-Route::post('messages', [MessageController::class, 'store']);
+Route::post('add-review', [ReviewController::class, 'store']);
 
 Route::get('objectives', [HomeController::class, 'objectives']);
 Route::get('missionvison', [HomeController::class, 'missionvison']);

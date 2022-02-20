@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html class="projectstypelist no-js theme-white" data-pageclassname="projectstypelist" data-pagetheme="theme-white" lang="en">
 <head>
@@ -24,7 +22,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Search projects by type | APL Holdings" />
     <meta property="og:description" content="View all of the practices project types, read about each individually and view the galleries." />
-
     <link rel="apple-touch-icon" href="/static/assets/images/ico/apple-touch-icon-114-precomposed.png?v=3" />
     <link rel="apple-touch-icon" sizes="152x152" href="/static/assets/images/ico/apple-touch-icon-144-precomposed.png?v=3" />
 
@@ -38,6 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{asset('/static/css/main.css')}}"/>
 
+    <script type="text/javascript" src="/"></script>
     <script>
 
 
@@ -54,8 +52,10 @@
     <style>
         body{
             background: white!important;
+            overflow: visible!important;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         document.querySelectorAll('.fp-trigger[data-controls="s"]').forEach((trigger) => {
             trigger.addEventListener('click', () => {
@@ -72,7 +72,7 @@
             });
         });
     </script>
-
+    @stack('head-script')
 </head>
 <body>
 
@@ -281,6 +281,8 @@
 
 <div id="fb-root" data-locale="en_GB"></div>
 
+<script src="{{ asset('frontend')}}/assets/js/core.min.js"></script>
+<script src="{{ asset('frontend')}}/assets/js/script.js"></script>
 <script src="{{asset('/static/js/modernizr.min.js')}}"></script>
 <script src="{{asset('/static/js/lib.js')}}"></script>
 <script src="{{asset('/static/js/main.js')}}"></script>

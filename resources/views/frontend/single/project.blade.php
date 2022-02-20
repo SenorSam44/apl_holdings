@@ -118,10 +118,6 @@
                 <div class="fp-pg-mask__before"></div>
                 <div class="fp-pg-mask__after"></div>
                 <img sizes="100vw"
-                     {{--                     srcset="/media/2641973/2018_fp708163.png?width=768&quality=85 768w,--}}
-                     {{--                            /media/2641973/2018_fp708163.png?width=1350&quality=85 1350w,--}}
-                     {{--                            /media/2641973/2018_fp708163.png?width=1920&quality=85 1920w,--}}
-                     {{--                            /media/2641973/2018_fp708163.png?width=3840&quality=85 3840w"--}}
                      srcset="{{asset($project->project_image2)}}"
                      class="fp-pg-image__source"
                      alt="Narbo Via">
@@ -195,32 +191,6 @@
                         <section class="fp-pd-stats">
                             <div class="fp-at-content">
                                 {{$project->project_description}}
-                                {{--                                <ul class="fp-pd-stats__cite-list fp-links-primary">--}}
-                                {{--                                    <li class="fp-pd-list-citation fp-list-link">--}}
-                                {{--                                        <a href="/description/archive/2021/12/narbo-via-narbonne-s-new-museum-of-roman-antiquities-inaugurated/"--}}
-                                {{--                                           class="track-on-click"--}}
-                                {{--                                           data-track-click-sub-type="press_click"--}}
-                                {{--                                           data-track-click-section="main"--}}
-                                {{--                                           data-track-click-detail="/description/archive/2021/12/narbo-via-narbonne-s-new-museum-of-roman-antiquities-inaugurated/">--}}
-                                {{--                                            <cite class="fp-pd-list-citation__date">13 December 2021</cite>--}}
-                                {{--                                            <cite class="fp-pd-list-citation__title">--}}
-                                {{--                                                <span class="fp-pd-link-text">Narbo Via, Narbonne’s new museum of Roman antiquities inaugurated</span>--}}
-                                {{--                                            </cite>--}}
-                                {{--                                        </a>--}}
-                                {{--                                    </li>--}}
-                                {{--                                    <li class="fp-pd-list-citation fp-list-link">--}}
-                                {{--                                        <a href="/description/archive/2018/01/narbonne-s-museum-of-antiquities-tops-out/"--}}
-                                {{--                                           class="track-on-click"--}}
-                                {{--                                           data-track-click-sub-type="press_click"--}}
-                                {{--                                           data-track-click-section="main"--}}
-                                {{--                                           data-track-click-detail="/description/archive/2018/01/narbonne-s-museum-of-antiquities-tops-out/">--}}
-                                {{--                                            <cite class="fp-pd-list-citation__date">30 January 2018</cite>--}}
-                                {{--                                            <cite class="fp-pd-list-citation__title">--}}
-                                {{--                                                <span class="fp-pd-link-text">Narbonne’s museum of antiquities tops out</span>--}}
-                                {{--                                            </cite>--}}
-                                {{--                                        </a>--}}
-                                {{--                                    </li>--}}
-                                {{--                                </ul>--}}
                             </div>
                         </section>
 
@@ -367,5 +337,11 @@
         document.querySelectorAll('circle').forEach((circle)=>{
             circle.setAttribute('stroke', '#fff')
         });
+
+        pannellum.viewer('panorama-360-view', {
+            "type": "equirectangular",
+            "panorama": "https://i.ibb.co/6PGHKkT/360-image.jpg",
+            "autoLoad": true
+        })
     </script>
 @endsection

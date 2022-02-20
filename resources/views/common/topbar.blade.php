@@ -1,29 +1,33 @@
 <style>
     .fp-header {
-        background-color: black!important;
+        background-color: black !important;
     }
 
-    .fp-nav-list-item{
+    .fp-nav-list-item {
         cursor: pointer;
-        color:white;
+        color: white;
     }
 
-    .fp-nav-list-item .fp-nav-link{
-        color: white!important;
+    .fp-nav-list-item .fp-nav-link {
+        color: white !important;
     }
 
-    .fp-nav-list-item .selected{
+    .fp-nav-list-item .selected {
         font-weight: bold;
     }
 
-    .nav-link a, .fp-nav-list-item a{
+    .nav-link a, .fp-nav-list-item a {
         font-size: 14px;
-        color: white!important;
+        color: white !important;
         font-weight: normal;
     }
 
-    .fp-nav-list-item a:hover, .fp-nav-list-item a.selected{
-        color: #CAA65B!important;
+    .fp-nav-list-item a:hover, .fp-nav-list-item a.selected {
+        color: #CAA65B !important;
+    }
+
+    .autocomplete-suggestions {
+        color: white;
     }
 
     @media screen and (min-width: 1024px) {
@@ -31,15 +35,21 @@
             background: url(/frontend/assets/img/search-white.svg) center center no-repeat transparent;
         }
 
-        html.theme-white .fp-header-search .fp-hs-term, .seniorpartner .fp-header-search .fp-hs-term, .partner .fp-header-search .fp-hs-term, .fp-header-content-over .fp-header-search .fp-hs-term{
+        /*html.theme-white .fp-header-search .fp-hs-term, .seniorpartner .fp-header-search .fp-hs-term, .partner .fp-header-search .fp-hs-term, .fp-header-content-over .fp-header-search .fp-hs-term{*/
+        /*    color: white;*/
+        /*}*/
+        .fp-hs-form #fp-search-term::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;
+            opacity: 1; /* Firefox */
         }
-        .fp-header-search .fp-hs-toggle{
+
+        .fp-header-search .fp-hs-toggle {
             top: 0;
         }
     }
+
     @media screen and (max-device-width: 729px) {
-        html.theme-white .fp-navigation .fp-pulse::after{
+        html.theme-white .fp-navigation .fp-pulse::after {
             background-color: white;
         }
     }
@@ -64,10 +74,10 @@
 
             <div class="fp-hs-search-content">
 
-                <form action="/search" class="fp-hs-form">
+                <form action="{{url('/search')}}" class="fp-hs-form">
 
-                    <label for="fp-search-term" class="fp-hs-label">Search Foster + Partners</label>
-                    <input type="search" id="fp-search-term" class="fp-hs-term" placeholder="Search Foster + Partners"
+                    <label for="fp-search-term" class="fp-hs-label">Search APL Holdings</label>
+                    <input type="search" id="fp-search-term" class="fp-hs-term" placeholder="Search APL Holdings"
                            data-original-value="" tabindex="-1"/>
 
                     <input type="submit" value="Search" class="fp-hs-submit" tabindex="-1"/>
@@ -85,29 +95,13 @@
                 <p class="fp-is-title">Recommended searches</p>
 
                 <ul class="fp-is-list">
-                    <li class="fp-is-list-item">
-                        <a href="/studio/commitments/sustainability-principles/" target="_blank" class="fp-is-link"
-                           tabindex="-1">Sustainability Principles</a>
-                    </li>
-                    <li class="fp-is-list-item">
-                        <a href="/studio/commitments/diversity-and-inclusion/" class="fp-is-link no-auto-detection"
-                           tabindex="-1">Diversity and Inclusion</a>
-                    </li>
-                    <li class="fp-is-list-item">
-                        <a href="https://www.fosterandpartners.com/media/2641178/tax_strategy_fpgl_2021.pdf"
-                           target="_blank" class="fp-is-link" tabindex="-1">Tax Strategy 2021</a>
-                    </li>
-                    <li class="fp-is-list-item">
-                        <a href="https://www.fosterandpartners.com/media/2641721/uk_gender_pay_gap_report_2021_foster_-_partners.pdf"
-                           target="_blank" class="fp-is-link" tabindex="-1">Gender Pay Gap Report 2021</a>
-                    </li>
-                    <li class="fp-is-list-item">
-                        <a href="/privacy-notice/" target="_blank" class="fp-is-link" tabindex="-1">Privacy Notice</a>
-                    </li>
-                    <li class="fp-is-list-item">
-                        <a href="/anti-slavery-and-human-trafficking-policy/" target="_blank" class="fp-is-link"
-                           tabindex="-1">Anti-Slavery and Human Trafficking Statement</a>
-                    </li>
+                    <?php $projects = \App\Models\Project::orderBy('created_at', 'DESC')->take(5)->get() ?>
+                    @foreach($projects as $project)
+                        <li class="fp-is-list-item">
+                            <a href="/projects/{{$project->id}}" target="_blank" class="fp-is-link"
+                               tabindex="-1">{{$project->project_title}}</a>
+                        </li>
+                    @endforeach
                 </ul>
 
             </div>
@@ -144,9 +138,7 @@
 
             <ul class="fp-nav-list">
 
-                <li class="fp-nav-list-item fp-nav-list-search">
-
-
+                <li class="fp-nav-list-search">
                     <div class="component fp-header-search fp-hs-navigation" data-component-name="header-search"
                          data-is-navigation="true">
 
@@ -163,7 +155,7 @@
                                     <label for="fp-search-term-navigation" class="fp-hs-label">Search Foster +
                                         Partners</label>
                                     <input type="search" id="fp-search-term-navigation" class="fp-hs-term"
-                                           placeholder="Search Foster + Partners" data-original-value="" tabindex="-1"/>
+                                           placeholder="Search APL Holdings" data-original-value="" tabindex="-1"/>
 
                                     <input type="submit" value="Search" class="fp-hs-submit" tabindex="-1"/>
                                     <input type="reset" value="Clear" class="fp-hs-search-clear"/>
@@ -178,37 +170,15 @@
 
                             <div class="fp-is-container">
                                 <p class="fp-is-title">Recommended searches</p>
-
                                 <ul class="fp-is-list">
-                                    <li class="fp-is-list-item">
-                                        <a href="/studio/commitments/sustainability-principles/" target="_blank"
-                                           class="fp-is-link" tabindex="-1">Sustainability Principles</a>
-                                    </li>
-                                    <li class="fp-is-list-item">
-                                        <a href="/studio/commitments/diversity-and-inclusion/"
-                                           class="fp-is-link no-auto-detection" tabindex="-1">Diversity and
-                                            Inclusion</a>
-                                    </li>
-                                    <li class="fp-is-list-item">
-                                        <a href="https://www.fosterandpartners.com/media/2641178/tax_strategy_fpgl_2021.pdf"
-                                           target="_blank" class="fp-is-link" tabindex="-1">Tax Strategy 2021</a>
-                                    </li>
-                                    <li class="fp-is-list-item">
-                                        <a href="https://www.fosterandpartners.com/media/2641721/uk_gender_pay_gap_report_2021_foster_-_partners.pdf"
-                                           target="_blank" class="fp-is-link" tabindex="-1">Gender Pay Gap Report
-                                            2021</a>
-                                    </li>
-                                    <li class="fp-is-list-item">
-                                        <a href="/privacy-notice/" target="_blank" class="fp-is-link" tabindex="-1">Privacy
-                                            Notice</a>
-                                    </li>
-                                    <li class="fp-is-list-item">
-                                        <a href="/anti-slavery-and-human-trafficking-policy/" target="_blank"
-                                           class="fp-is-link" tabindex="-1">Anti-Slavery and Human Trafficking
-                                            Statement</a>
-                                    </li>
+                                    <?php $projects = \App\Models\Project::orderBy('created_at', 'DESC')->take(4)->get() ?>
+                                    @foreach($projects as $project)
+                                        <li class="fp-is-list-item">
+                                            <a href="/projects/{{$project->id}}" target="_blank" class="fp-is-link"
+                                               tabindex="-1">{{$project->project_title}}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
-
                             </div>
 
                         </div>
@@ -218,7 +188,7 @@
                 </li>
 
                 <li class="fp-nav-list-item nav-link" data-target="/about">
-                    <a href="/about" >About Us
+                    <a href="/about">About Us
                     </a>
                 </li>
 
@@ -226,7 +196,7 @@
                     <a href="/our-team">Our Team</a>
                 </li>
                 <li class="fp-nav-list-item nav-link" data-target="/projects">
-                    <a href="/projects" >Projects
+                    <a href="/projects">Projects
                     </a>
                 </li>
 
@@ -259,7 +229,7 @@
 <div class="fp-navigation-gradient"></div>
 
 <style>
-    .nav-link{
+    .nav-link {
         cursor: pointer;
     }
 </style>
@@ -270,6 +240,6 @@
             window.location.assign(link.getAttribute('data-target'));
         });
     });
-    document.querySelector('.fp-nav-list-item[data-target='+CSS.escape(window.location.pathname)+'] a').classList.add('selected');
+    document.querySelector('.fp-nav-list-item[data-target=' + CSS.escape(window.location.pathname) + '] a').classList.add('selected');
 
 </script>

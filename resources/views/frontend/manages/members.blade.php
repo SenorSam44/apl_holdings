@@ -1,26 +1,15 @@
 @extends('layouts.userapp')
 
-@section('content')
+@push('head-script')
     <style type="text/css" data-type="vc_shortcodes-custom-css">
         .vc_column-inner {
-            padding-right: 0px !important;
-            padding-left: 0px !important;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
         }
-
-        /*.vc_custom_1543585777887 {*/
-        /*    padding-right: 0px !important;*/
-        /*    padding-left: 0px !important;*/
-        /*}*/
-
-        /*.vc_custom_1543585790272 {*/
-        /*    padding-right: 0px !important;*/
-        /*    padding-left: 0px !important;*/
-        /*}*/
-
-        /*.vc_custom_1543585806892 {*/
-        /*    padding-right: 0px !important;*/
-        /*    padding-left: 0px !important;*/
-        /*}*/
+        /** main theme override **/
+        .fp-search-is-open .fp-navigation .fp-nav-list-wrap {
+            height: auto!important;
+        }
     </style>
 
     <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
@@ -149,7 +138,11 @@
                 top: 12px!important;
             }
         }
+
     </style>
+@endpush
+
+@section('content')
     <div style="overflow: hidden; padding-top: 74px">
         <div class="page-template page-template-full-width page-template-full-width-php page page-id-1740 diefinnhutte-core-1.0 woocommerce-no-js diefinnhutte-ver-1.0 qodef-grid-1200 qodef-wide-dropdown-menu-content-in-grid qodef-footer-light qodef-light-header qodef-no-behavior qodef-dropdown-animate-height qodef-header-standard qodef-menu-area-shadow-disable qodef-menu-area-in-grid-shadow-disable qodef-menu-area-border-disable qodef-menu-area-in-grid-border-disable qodef-logo-area-border-disable qodef-logo-area-in-grid-border-disable qodef-header-vertical-shadow-disable qodef-header-vertical-border-disable qodef-side-menu-slide-from-right qodef-woocommerce-columns-3 qodef-woo-normal-space qodef-woo-pl-info-below-image qodef-woo-single-thumb-below-image qodef-woo-single-has-pretty-photo qodef-default-mobile-header qodef-sticky-up-mobile-header qodef-fullscreen-search qodef-search-fade wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
             <div class="qodef-wrapper">
@@ -190,7 +183,7 @@
                                 <div class="qodef-title-wrapper" style="height: 358px">
                                     <div class="qodef-title-inner">
                                         <div class="qodef-grid">
-                                            <h1 class="qodef-page-title entry-title" style="color: #ffffff">Our
+                                            <h1 class="qodef-page-title entry-title" style="color: #fff; max-width: 100vw">Our
                                                 Team</h1>
                                         </div>
                                         <div class="qodef-breadcrumbs-info">

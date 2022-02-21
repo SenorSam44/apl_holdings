@@ -1,145 +1,20 @@
 @extends('layouts.userapp')
 
 @push('head-script')
-    <style type="text/css" data-type="vc_shortcodes-custom-css">
-        .vc_column-inner {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
-        }
-        /** main theme override **/
-        .fp-search-is-open .fp-navigation .fp-nav-list-wrap {
-            height: auto!important;
-        }
-    </style>
 
     <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
         var gtm4wp_datalayer_name = "dataLayer";
         var dataLayer = dataLayer || [];
         //]]>
     </script>
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/d6a97.css"
-          media="all"/>
-    <link rel='stylesheet' id='rabbit_css-css'
-          href='https://export.qodethemes.com/_toolbar/assets/css/rbt-modules.css?ver=5.2.2' type='text/css'
-          media='all'/>
-    <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/c138f.css"
-          media="all"/>
 
-    <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/ac99c.css"
-          media="all"/>
-    <style id='diefinnhutte-select-woo-inline-css' type='text/css'>
-        .page-id-1740 .qodef-content .qodef-content-inner > .qodef-container > .qodef-container-inner, .page-id-1740 .qodef-content .qodef-content-inner > .qodef-full-width > .qodef-full-width-inner {
-            padding: 0 0;
-        }
+    <link rel='stylesheet'
+          href='/static/css/dief.css' type='text/css'/>
 
-        @media only screen and (max-width: 1024px) {
-            .page-id-1740 .qodef-content .qodef-content-inner > .qodef-container > .qodef-container-inner, .page-id-1740 .qodef-content .qodef-content-inner > .qodef-full-width > .qodef-full-width-inner {
-                padding: 0 0;
-            }
-        }
+{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/e58d4.js"></script>--}}
+{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/f1253.js"></script>--}}
+{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/864c2.js"></script>--}}
 
-        .page-id-1740 .qodef-content .qodef-content-inner > .qodef-container > .qodef-container-inner, .page-id-1740 .qodef-content .qodef-content-inner > .qodef-full-width > .qodef-full-width-inner {
-            padding: 0 0;
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .page-id-1740 .qodef-content .qodef-content-inner > .qodef-container > .qodef-container-inner, .page-id-1740 .qodef-content .qodef-content-inner > .qodef-full-width > .qodef-full-width-inner {
-                padding: 0 0;
-            }
-        }
-
-        .page-id-1740 .qodef-page-header .qodef-menu-area {
-            background-color: rgba(23, 23, 23, 1);
-        }
-
-        .page-id-1740 .qodef-page-footer .qodef-footer-top-holder {
-            background-color: #252525;
-        }
-
-        .page-id-1740 .qodef-page-footer .qodef-footer-bottom-holder {
-            background-color: #171717;
-        }
-
-        @media screen and (max-device-width: 729px) {
-            .qodef-title-inner .qodef-grid{
-                width: 100%;
-            }
-
-            .qodef-team-image img {
-                height: auto!important;
-            }
-        }
-
-    </style>
-    <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/620a1.css"
-          media="all"/>
-    <link rel='stylesheet' id='diefinnhutte-select-google-fonts-css'
-          href='https://fonts.googleapis.com/css?family=Overpass%3A100%2C200%2C300%2C400%2C600%2C700%2C800%7COswald%3A100%2C200%2C300%2C400%2C600%2C700%2C800&#038;subset=latin-ext&#038;ver=1.0.0'
-          type='text/css' media='all'/>
-    <!--[if lt IE 9]>
-    <link rel='stylesheet' id='vc_lte_ie9-css'
-          href='https://diefinnhutte.qodeinteractive.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css'
-          type='text/css' media='screen'/>
-    <![endif]-->
-    <link rel="stylesheet" href="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/82aae.css"
-          media="all"/>
-    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/e58d4.js"></script>
-    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/f1253.js"></script>
-    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/864c2.js"></script>
-
-    <style type="text/css" id="wp-custom-css">
-        .qodef-parallax-row-holder {
-            background-size: cover;
-        }
-
-        .qodef-title-holder.qodef-bg-parallax {
-            background-size: cover;
-        }
-    </style>
-    <noscript>
-        <style> .wpb_animate_when_almost_visible {
-                opacity: 1;
-            }</style>
-    </noscript>
-
-    {{--    //override--}}
-    <style>
-        .qodef-side-menu-slide-from-right .qodef-wrapper .qodef-cover {
-            top: unset;
-        }
-        .qodef-side-menu-slide-from-right .qodef-wrapper {
-            z-index: 0!important;
-        }
-
-        .qodef-container, .qodef-full-width {
-            padding-bottom: 2vw;
-            background: black;
-        }
-
-        .qodef-team-image img {
-            height: 33vw;
-        }
-        @media screen and (min-width: 1024px){
-            .fp-nav-list-wrap.higher {
-                top: 12px!important;
-            }
-        }
-
-    </style>
 @endpush
 
 @section('content')
@@ -223,14 +98,6 @@
                                                                                             <h4 class="qodef-team-name">
                                                                                                 {{$members[$j]->member_name}}
                                                                                             </h4>
-                                                                                            {{--                                                                                        <div class="qodef-team-social-text-holder">--}}
-                                                                                            {{--                                                                                            <a href="https://www.instagram.com/qodeinteractive/"--}}
-                                                                                            {{--                                                                                               target="_blank">instagram</a>--}}
-                                                                                            {{--                                                                                            <a href="https://twitter.com/QodeInteractive"--}}
-                                                                                            {{--                                                                                               target="_blank">twitter</a>--}}
-                                                                                            {{--                                                                                            <a href="https://www.linkedin.com/company/qode-themes/"--}}
-                                                                                            {{--                                                                                               target="_blank">linkedin</a>--}}
-                                                                                            {{--                                                                                        </div>--}}
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -254,21 +121,8 @@
             </div>
 
 
-            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/4b6b3.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/0fef6.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/63c68.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/63a69.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/6c34b.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/be575.js"></script>
-
-            <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/13d7d.js"></script>
+            <script src="/static/js/dief.js"></script>
         </div>
     </div>
 @endsection

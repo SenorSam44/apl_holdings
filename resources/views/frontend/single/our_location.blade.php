@@ -99,13 +99,13 @@
 
         .location-box-label {
             position: absolute;
-            top: 50%;
+            bottom: -10%;
             transform: translateY(-50%);
             left: 0;
             width: 70%;
-            background: #ffffff8f;
+            /*background: #ffffff;*/
             text-align: center;
-            color: #232176;
+            color: #CAA65B;
             font-weight: bold;
             margin: 0 15%;
         }

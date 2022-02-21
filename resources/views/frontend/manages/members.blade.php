@@ -11,10 +11,6 @@
     <link rel='stylesheet'
           href='/static/css/dief.css' type='text/css'/>
 
-{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/e58d4.js"></script>--}}
-{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/f1253.js"></script>--}}
-{{--    <script src="https://diefinnhutte.qodeinteractive.com/wp-content/cache/minify/864c2.js"></script>--}}
-
 @endpush
 
 @section('content')

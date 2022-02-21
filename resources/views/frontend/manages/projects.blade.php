@@ -91,7 +91,7 @@
 
         @media screen and (min-width: 1024px){
             .fp-nav-list-wrap.higher {
-                top: 12px!important;
+                top: 16px!important;
             }
         }
 

@@ -126,20 +126,21 @@
                     <ul class="contact-info">
                         <li class="contact-info-item phone">
                             <h3 class="contact-info-title text-uppercase">Phone</h3>
-                            <p><a href="tel:518-420-4264">+88 01111 222 333</a></p>
-                            <p><a href="tel:518-698-1920">+88 01555 555 666</a></p>
+                            <p><a href="tel:+88 0312 551 355-6">+88 0312 551 355-6</a></p>
+                            <p><a href="tel:+88 0241 355 174-5">+88 0241 355 174-5</a></p>
                         </li>
                         <li class="contact-info-item email">
                             <h3 class="contact-info-title text-uppercase">E-Mail</h3>
-                            <p><a href="mailto:info@samplemail.com">aplholdings980@gmail.com</a></p>
-                            <p><a href="mailto:support@samplemail.com">aplholdings980@gmail.com</a></p>
+                            <p><a href="mailto:info@aplholding.com">info@aplholding.com</a></p>
+                            <p><a href="mailto:info@aplholding.com">info@aplholding.com</a></p>
                         </li>
                         <li class="contact-info-item address">
                             <h3 class="contact-info-title text-uppercase">Address</h3>
-                            <p>Shovonur Villa<br>
-                                Plot no #06, Shyamoli R/A,<br>
-                                Chittagong - 4200<br>
-                                Phone : +88 031 2522570</p>
+                            <p>APL HOLDINGS LTD.<br>
+                                Ipl City Center (4th Floor)<br>
+                                162,O.R.Nizam Road,Golpahar Moor,<br>
+                                Chittagong - 4000
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -154,7 +155,6 @@
     <!-- =======================* Section Start *===================== -->
 
 
-{{--    @include('')--}}
     <script>
         document.querySelectorAll('.nav-link').forEach((link) => {
             link.addEventListener('click', () => {

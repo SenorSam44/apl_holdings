@@ -6,7 +6,7 @@
 
     }
 
-    h3, a, footer .widget .qodef-widget-title-holder .qodef-widget-title {
+    footer h3, footer a, footer .widget .qodef-widget-title-holder .qodef-widget-title {
         color: white !important;
     }
 
@@ -75,87 +75,8 @@
                             <span class="qodef-btn-text">Read More</span>
                         </a></div>
                 </div>
-                {{--                <div class="qodef-column-content qodef-grid-col-3">--}}
-                {{--                    <div class="widget qodef-blog-list-widget">--}}
-                {{--                        <div class="qodef-widget-title-holder"><h5 class="qodef-widget-title">--}}
-                {{--                                Post</h5>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="qodef-blog-list-holder qodef-grid-list qodef-disable-bottom-space qodef-bl-minimal qodef-one-columns qodef-normal-space qodef-bl-pag-no-pagination"--}}
-                {{--                             data-type=minimal data-number-of-posts=2 data-number-of-columns=one--}}
-                {{--                             data-space-between-items=normal data-orderby=date data-order=ASC--}}
-                {{--                             data-image-size=thumbnail data-title-tag=h6 data-excerpt-length=19--}}
-                {{--                             data-post-info-section=yes data-post-info-image=yes--}}
-                {{--                             data-post-info-author=no--}}
-                {{--                             data-post-info-date=yes data-post-info-category=no--}}
-                {{--                             data-post-info-comments=no--}}
-                {{--                             data-post-info-like=no data-post-info-share=no--}}
-                {{--                             data-pagination-type=no-pagination--}}
-                {{--                             data-max-num-pages=15 data-next-page=2>--}}
-                {{--                            <div class="qodef-bl-wrapper qodef-outer-space">--}}
-                {{--                                <ul class="qodef-blog-list">--}}
-                {{--                                    <li class="qodef-bl-item qodef-item-space clearfix">--}}
-                {{--                                        <div class="qodef-bli-inner">--}}
-                {{--                                            <div class="qodef-bli-content">--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/about">--}}
-                {{--                                                        About Us--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/our-team"--}}
-                {{--                                                       title="Our team">--}}
-                {{--                                                        Our Team--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/projects"--}}
-                {{--                                                       title="Projects">--}}
-                {{--                                                        Projects--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/news"--}}
-                {{--                                                       title="News">--}}
-                {{--                                                        News--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/contacts"--}}
-                {{--                                                       title="Contact Us">--}}
-                {{--                                                        Contact Us--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                                <div itemprop="dateCreated"--}}
-                {{--                                                     class="qodef-post-info-date entry-date published updated">--}}
-                {{--                                                    <a itemprop="url"--}}
-                {{--                                                       href="/map"--}}
-                {{--                                                       title="Map">--}}
-                {{--                                                        Map--}}
-                {{--                                                    </a>--}}
-                {{--                                                </div>--}}
-                {{--                                            </div>--}}
-                {{--                                        </div>--}}
-                {{--                                    </li>--}}
-                {{--                                </ul>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
                 <div class="qodef-column-content qodef-grid-col-3">
                     <div id="nav_menu-2" class="widget qodef-footer-column-3 widget_nav_menu">
-                        {{--                        <div class="qodef-widget-title-holder"><h5 class="qodef-widget-title">--}}
-                        {{--                                Projects</h5>--}}
-                        {{--                        </div>--}}
                         <div class="menu-footer-menu-one-container">
                             <ul id="menu-footer-menu-one" class="menu">
                                 <li id="menu-item-589"

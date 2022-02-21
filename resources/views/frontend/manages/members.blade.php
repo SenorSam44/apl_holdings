@@ -54,12 +54,13 @@
                                 <div class="qodef-title-wrapper" style="height: 358px">
                                     <div class="qodef-title-inner">
                                         <div class="qodef-grid">
-                                            <h1 class="qodef-page-title entry-title" style="color: #fff; max-width: 100vw">Our
+                                            <h1 class="qodef-page-title entry-title" style="color: #CAA65B; max-width: 100vw">Our
                                                 Team</h1>
                                         </div>
                                         <div class="qodef-breadcrumbs-info">
                                             <div itemprop="breadcrumb" class="qodef-breadcrumbs qodef-has-inline-style"
-                                                 style="color: #ffffff"><a itemprop="url"
+                                                 style="color: #CAA65B"><a itemprop="url"
+                                                                           style="color: #CAA65B!important;"
                                                                            href="https://diefinnhutte.qodeinteractive.com/">Home</a><span
                                                         class="qodef-delimiter">&nbsp; / &nbsp;</span><span
                                                         class="qodef-current">Our Team</span>

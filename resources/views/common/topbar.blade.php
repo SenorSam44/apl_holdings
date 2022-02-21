@@ -5,11 +5,11 @@
 
     .fp-nav-list-item {
         cursor: pointer;
-        color: white;
+        color: #CAA65B;
     }
 
     .fp-nav-list-item .fp-nav-link {
-        color: white !important;
+        color: #CAA65B !important;
     }
 
     .fp-nav-list-item .selected {
@@ -18,16 +18,16 @@
 
     .nav-link a, .fp-nav-list-item a {
         font-size: 14px;
-        color: white !important;
+        color: #CAA65B !important;
         font-weight: normal;
     }
 
     .fp-nav-list-item a:hover, .fp-nav-list-item a.selected {
-        color: #CAA65B !important;
+        color: white !important;
     }
 
     .autocomplete-suggestions {
-        color: white;
+        color: #CAA65B;
     }
 
     @media screen and (min-width: 1024px) {

@@ -3,18 +3,18 @@
     <style>
         body{
             background: black;
-            color: white;
+            color: #CAA65B;
         }
         .fp-project-detail, .fp-section-tab, .fp-project-gallery, .pswp__scroll-wrap{
             background: black!important;
 
         }
         .fp-st-link, .fp-pd-stats__dl-list .fp-pd-stats__dl-dt, .fp-pd-stats__dl-list .fp-pd-stats__dl-dd{
-            color: white!important;
+            color: #CAA65B!important;
         }
 
         .fp-st-link.selected{
-            color: #CAA65B!important;
+            color: white!important;
         }
 
         .fp-st-pointer{

@@ -8,39 +8,17 @@
 
         .fp-nav-list-item{
             cursor: pointer;
-            color:white;
+            color:#CAA65B;
         }
 
         .nav-link a, .fp-nav-list-item a{
             font-size: 14px;
-            color: white!important;
+            color: #CAA65B!important;
             font-weight: normal;
         }
-        /*@media screen and (max-device-width: 729px){*/
-        /*    .component.fp-logo{*/
-        /*        width: 50vw;*/
-        /*        height: auto;*/
-        /*    }*/
-
-        /*    .component.fp-logo .fp-svg-logo{*/
-        /*        width: 35vw;*/
-        /*        height: auto;*/
-        /*    }*/
-
-        /*    .fp-nav-list-item a{*/
-        /*        font-size: 40px;*/
-        /*    }*/
-
-        /*    .fp-hp-figure__title{*/
-        /*        font-size: 40px!important;*/
-        /*    }*/
-        /*    .fp-hp-figure__body{*/
-        /*        font-size: 35px!important;*/
-        /*    }*/
-        /*    .fp-hp-figure .fp-hp-figure__title {*/
-        /*        margin-bottom: 25px;*/
-        /*    }*/
-        /*}*/
+        .fp-hp-figure__title, .fp-hp-figure__body{
+            color: #CAA65B;
+        }
     </style>
     <div class="fp-carousel-overlay"></div>
     <div class="component fp-carousel" data-component-name="carousel"

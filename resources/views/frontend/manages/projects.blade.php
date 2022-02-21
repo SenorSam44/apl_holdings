@@ -1,22 +1,6 @@
 @extends('layouts.userapp')
 @section('content')
 
-    <!-- 3 -->
-    <link rel="apple-touch-icon"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/apple-touch-icon-114-precomposed.png?v=3"/>
-    <link rel="apple-touch-icon" sizes="152x152"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/apple-touch-icon-144-precomposed.png?v=3"/>
-
-    <link rel="icon" type="image/png" sizes="16x16"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-16x16.png?v=3"/>
-    <link rel="icon" type="image/png" sizes="32x32"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-32x32.png?v=3"/>
-    <link rel="icon" type="image/png" sizes="192x192"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-192x192.png?v=3"/>
-    <link rel="icon" type="image/png" sizes="128x128"
-          href="https://www.fosterandpartners.com/static/assets/images/ico/favicon-128x128.png?v=3"/>
-    <link rel="shortcut icon" href="/favicon.ico?v=3"/>
-
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
 
     <script>
@@ -51,7 +35,7 @@
         }
 
         .fp-bar-item .fp-bar-button > .arrow-down {
-            background: url(https://www.fosterandpartners.com/static/assets/images/icons/chevron-down-white.svg?v=2) no-repeat;
+            background: url(/frontend/assets/img/chevron-down.svg) no-repeat;
             background-size: 100%;
         }
 
@@ -61,11 +45,11 @@
         }
 
         .fp-bar-item .fp-bar-button, .fp-bar-total {
-            color: white;
+            color: #CAA65B;
         }
 
         .fp-bar-button .fp-trigger {
-            color: white;
+            color: #CAA65B;
         }
 
         .fp-lazy-load-image.fp-content__img{
@@ -75,7 +59,7 @@
 
         .fp-filter-wrapper, .fp-filter-select{
             background: black;
-            color: white;
+            color: #CAA65B;
         }
 
         html.theme-white .fp-navigation .fp-pulse::after, .seniorpartner .fp-navigation .fp-pulse::after, .partner .fp-navigation .fp-pulse::after, .fp-header-content-over .fp-navigation .fp-pulse::after{
@@ -93,6 +77,10 @@
             .fp-nav-list-wrap.higher {
                 top: 16px!important;
             }
+        }
+
+        .fp-content-header__title, .fp-content-header__subtitle{
+            color: #CAA65B;
         }
 
 
@@ -253,11 +241,6 @@
                             <span class="fp-bar-button__text">All project types</span><span class="arrow-down"></span>
                         </button>
                     </div>
-                    {{--                    <div class="fp-bar-item fp-bar-elm-animate">--}}
-                    {{--                        <button class="fp-bar-button fp-trigger" data-controls="location" type="button">--}}
-                    {{--                            <span class="fp-bar-button__text">All locations</span><span class="arrow-down"></span>--}}
-                    {{--                        </button>--}}
-                    {{--                    </div>--}}
                     <div class="fp-bar-total fp-bar-elm-animate">{{count($projects)}} projects</div>
                 </div>
                 <div class="fp-filter-selects">
@@ -269,37 +252,8 @@
                             @foreach($categories as $category){
                             <option value="/projects/?projecttype={{$category->name}}">{{$category->category_name}}</option>
                             @endforeach
-                            {{--                            <option value="/projects/?projecttype=culture">Culture</option>--}}
-                            {{--                            <option value="/projects/?projecttype=civic">Civic</option>--}}
-                            {{--                            <option value="/projects/?projecttype=offices-and-headquarters">Offices and--}}
-                            {{--                                Headquarters--}}
-                            {{--                            </option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=transport-and-infrastructure">Transport and--}}
-                            {{--                                Infrastructure--}}
-                            {{--                            </option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=health-and-education">Health and Education--}}
-                            {{--                            </option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=industrial-and-research">Industrial and--}}
-                            {{--                                Research--}}
-                            {{--                            </option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=industrial-design">Industrial Design</option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=hospitality-and-leisure">Hospitality and--}}
-                            {{--                                Leisure--}}
-                            {{--                            </option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=mixed-use">Mixed Use</option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=residential">Residential</option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=retail">Retail</option>--}}
-                            {{--                            <option value="/projects/type/?projecttype=urban-design">Urban Design</option>--}}
                         </select><span class="arrow-down"></span>
                     </div>
-                    {{--                    <div class="fp-filter-wrapper">--}}
-                    {{--                        <select class="fp-filter-select" data-controls="location">--}}
-
-                    {{--                            <option selected value="/projects/type/">All locations</option>--}}
-                    {{--                            <option value="/projects/type/?location=argentina">Argentina</option>--}}
-                    {{--                            <option value="/projects/type/?location=australia">Australia</option>--}}
-                    {{--                        </select><span class="arrow-down"></span>--}}
-                    {{--                    </div>--}}
                 </div>
                 <div class="fp-filter-drawer" data-source="type" data-velocity="650,750">
                     <ul class="fp-filter-options-list">
@@ -321,9 +275,6 @@
                                         Under Construction
                                     </a>
                                 </li>
-{{--                                <li class="fp-filter-option "><a class="fp-filter-link"--}}
-{{--                                                                 href="/projects/type/?projecttype=culture">Culture</a>--}}
-{{--                                </li>--}}
                             </ul>
                         </li>
                         <li class="fp-filter-set">
@@ -504,10 +455,6 @@
                                 <div data-target="/projects/{{$project->id}}" class="fp-content nav-link">
                             <span class="fp-lazy-load-image fp-content__img is-blurred"
                                   sizes="(min-width: 768px) 50vw, 100vw"
-                                  {{--                                  srcset="/media/2637191/hero_2612_fp641289.jpg?width=768&quality=85  768w,--}}
-                                  {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=960&quality=85  960w,--}}
-                                  {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=1350&quality=85 1350w,--}}
-                                  {{--                                          /media/2637191/hero_2612_fp641289.jpg?width=1920&quality=85 1920w"--}}
                                   srcset="{{asset($project->project_image1)}}"
                                   alt="Amaravati masterplan"></span>
                                     <div class="fp-content-header">
@@ -539,329 +486,6 @@
 
 
                 @include('common.footer')
-                {{--                <div class="component fp-footer" data-component-name="footer">--}}
-                {{--                    <div class="fp-footer-columns">--}}
-
-                {{--                        <div class="fp-footer-column" data-index="0">--}}
-                {{--                            <div class="fp-footer-header">--}}
-                {{--                                <h4 class="fp-fh-title">Projects</h4>--}}
-                {{--                                <span class="fp-fh-chevron"></span>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="fp-footer-links">--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/projects/type/?isnew=true">--}}
-
-                {{--                                        Recently Completed--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/projects/type/?onsite=true">--}}
-
-                {{--                                        Under Construction--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=culture">--}}
-
-                {{--                                        Culture--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=civic">--}}
-
-                {{--                                        Civic--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=offices-and-headquarters">--}}
-
-                {{--                                        Offices and Headquarters--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=transport-and-infrastructure">--}}
-
-                {{--                                        Transport and Infrastructure--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=health-and-education">--}}
-
-                {{--                                        Health and Education--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=industrial-and-research">--}}
-
-                {{--                                        Industrial and Research--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=industrial-design">--}}
-
-                {{--                                        Industrial Design--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=hospitality-and-leisure">--}}
-
-                {{--                                        Hospitality and Leisure--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=mixed-use">--}}
-
-                {{--                                        Mixed Use--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=residential">--}}
-
-                {{--                                        Residential--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=retail">--}}
-
-                {{--                                        Retail--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/projects/type/?projecttype=urban-design">--}}
-
-                {{--                                        Urban Design--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="fp-footer-column" data-index="1">--}}
-                {{--                            <div class="fp-footer-header">--}}
-                {{--                                <h4 class="fp-fh-title">Expertise</h4>--}}
-                {{--                                <span class="fp-fh-chevron"></span>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="fp-footer-links">--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/architecture/">--}}
-
-                {{--                                        Architecture--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/environmental-engineering/">--}}
-
-                {{--                                        Environmental Engineering--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/structural-engineering/">--}}
-
-                {{--                                        Structural Engineering--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/sustainability/">--}}
-
-                {{--                                        Sustainability--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/urban-design-and-landscape/">--}}
-
-                {{--                                        Urban Design and Landscape--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/industrial-design/">--}}
-
-                {{--                                        Industrial Design--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/workplace-consultancy/">--}}
-
-                {{--                                        Workplace Consultancy--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/interiors/">--}}
-
-                {{--                                        Interiors--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/applied-research-development/">--}}
-
-                {{--                                        Applied Research &amp; Development--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/specialist-modelling-group/">--}}
-
-                {{--                                        Specialist Modelling Group--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/materials-research-centre/">--}}
-
-                {{--                                        Materials Research Centre--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/design-communications/">--}}
-
-                {{--                                        Design Communications--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="/expertise/visualisation-and-film/">--}}
-
-                {{--                                        Visualisation and Film--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/communications/">--}}
-
-                {{--                                        Communications--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/modelmaking/">--}}
-
-                {{--                                        Modelmaking--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/project-management/">--}}
-
-                {{--                                        Project Management--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/construction-review/">--}}
-
-                {{--                                        Construction Review--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/expertise/retrofit/">--}}
-
-                {{--                                        Retrofit--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="fp-footer-column" data-index="2">--}}
-                {{--                            <div class="fp-footer-header">--}}
-                {{--                                <h4 class="fp-fh-title">News</h4>--}}
-                {{--                                <span class="fp-fh-chevron"></span>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="fp-footer-links">--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/news/">--}}
-
-                {{--                                        News--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/news/videos/">--}}
-
-                {{--                                        Videos--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="fp-footer-column" data-index="3">--}}
-                {{--                            <div class="fp-footer-header">--}}
-                {{--                                <h4 class="fp-fh-title">About us</h4>--}}
-                {{--                                <span class="fp-fh-chevron"></span>--}}
-                {{--                            </div>--}}
-                {{--                            <div class="fp-footer-links">--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/studio/">--}}
-
-                {{--                                        Studio--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/studio/people/">--}}
-
-                {{--                                        People--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection"--}}
-                {{--                                       href="https://www.fosterandpartnerscareers.com/">--}}
-
-                {{--                                        Careers--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="fp-footer-link-container">--}}
-                {{--                                    <a class="fp-footer-link no-auto-detection" href="/contact/">--}}
-
-                {{--                                        Contact--}}
-                {{--                                    </a>--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-
-                {{--                    <div class="fp-footer-lower">--}}
-                {{--                        <div class="fp-footer-hygine">--}}
-                {{--                            <span class="fp-footer-copyright">&#169; Copyright 2021 Foster + Partners. All Rights Reserved.</span>--}}
-                {{--                            <a class="fp-hygine-link" href="/privacy-notice/">Privacy Notice</a>--}}
-                {{--                            <a class="fp-hygine-link" href="/cookies-policy/">Cookies Policy</a>--}}
-                {{--                            <a class="fp-hygine-link" href="/anti-slavery-and-human-trafficking-policy/">Anti-Slavery--}}
-                {{--                                and Human Trafficking Policy</a>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="fp-footer-social">--}}
-                {{--                            <a href="https://twitter.com/FosterPartners"--}}
-                {{--                               class="fp-ftr-social-link fp-button-icon icon-twitter track-on-click"--}}
-                {{--                               target="_blank"--}}
-                {{--                               data-track-click-sub-type="share_twitter_click"--}}
-                {{--                               data-track-click-section="footer"--}}
-                {{--                               data-track-click-detail="channel_link">--}}
-                {{--                                <span class="icon__i"></span>--}}
-                {{--                            </a>--}}
-                {{--                            <a href="https://www.linkedin.com/company/foster-&amp;-partners/"--}}
-                {{--                               class="fp-ftr-social-link fp-button-icon icon-linkedin track-on-click"--}}
-                {{--                               target="_blank"--}}
-                {{--                               data-track-click-sub-type="share_linkedin_click"--}}
-                {{--                               data-track-click-section="footer"--}}
-                {{--                               data-track-click-detail="channel_link">--}}
-                {{--                                <span class="icon__i"></span>--}}
-                {{--                            </a>--}}
-                {{--                            <a href="https://www.instagram.com/fosterandpartners"--}}
-                {{--                               class="fp-ftr-social-link fp-button-icon icon-instagram track-on-click"--}}
-                {{--                               target="_blank"--}}
-                {{--                               data-track-click-sub-type="share_instagram_click"--}}
-                {{--                               data-track-click-section="footer"--}}
-                {{--                               data-track-click-detail="channel_link">--}}
-                {{--                                <span class="icon__i"></span>--}}
-                {{--                            </a>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
 
             </div>
 

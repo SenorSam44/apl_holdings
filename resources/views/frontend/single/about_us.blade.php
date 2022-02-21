@@ -292,6 +292,10 @@
             color: #CAA65B;
         }
 
+        .accordion-header .accordion-button{
+            font-size: 25px;
+        }
+
         @media screen and (max-width: 729px) {
             .tab-container .tab {
                 padding: 8px 0;
@@ -306,6 +310,25 @@
             .about-large-image {
                 height: auto;
                 padding: 2rem;
+            }
+
+            .accordion-header .accordion-button{
+                font-size: 20px;
+            }
+
+            .carousel-inner{
+                padding: 0 10vw;
+            }
+
+            .quote{
+                margin: 20px auto 0;
+                width: 300px;
+
+            }
+
+            .person-name{
+                margin-left: 0;
+                text-align: end;
             }
         }
 
@@ -324,14 +347,8 @@
         </div>
     </section>
     <div style="color: white; background: black">
-        <p style="font-size: 14px" class="text-white m-5 p-3 text-md-center text-justify">Lorem Ipsum is simply dummy
-            text of the
-            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-            Lorem Ipsum.</p>
+        <p style="font-size: 14px" class="text-white m-5 p-3 text-md-center text-justify">To contribute in the growing Real Estate Sector and also to contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”
+        </p>
 
         <div style="position: relative" class="sotc-wrapper">
             <img style="width: 100vw; height: 100%; opacity: 0.3" src="./frontend/assets/img/user-img-3.jpg"
@@ -353,19 +370,9 @@
                             Story of the Company
                         </p>
 
-                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                            ever since the
-                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has
-                            survived not only five centuries, but also the leap into electronic typesetting, remaining
-                            essentially
-                            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                            Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of
-                            Lorem Ipsum.
+                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
+
+                            <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
                         </p>
                     </div>
 
@@ -377,10 +384,8 @@
         <section class="work-process-section row my-5 p-3">
             <div class="offset-md-2 offset-0 col-md-5 col-12">
                 <h2 class="about-heading2 text-white">Work Process</h2>
-                <h3 class="medium-text text-white">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip
-                    ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</h3>
+                <h3 class="medium-text text-white">To contribute in the growing Real Estate Sector and also to
+                    contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”</h3>
                 <div class="row tab-wrapper">
                     <ul class="col-4 tab-container">
                         @foreach($abouts as $key=>$about)
@@ -409,12 +414,12 @@
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h1 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Story of the<br> Company
                     </button>
                 </h1>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div style="position: relative" class="sotc-wrapper">
@@ -436,41 +441,8 @@
                                            class="about-heading show-on-scroll text-white">
                                             Story of the Company</p>
 
-                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
-                                            simply dummy text of
-                                            the
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
+                                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
+                                            <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
                                         </p>
                                     </div>
 
@@ -507,44 +479,19 @@
                                     <div class="pl-5 col-md-6 col-12">
                                         <p style="text-transform: uppercase; line-height: 1.4"
                                            class="about-heading show-on-scroll text-white">
-                                            Story of the Company
+                                            Mr.Habib Chowdhury
                                         </p>
 
-                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
-                                            simply dummy text of
-                                            the
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
+                                        <p style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Mr. Habib Chowdhury is one of the Director of Board of Directors and looking after the business as Chief Executive Officer (CEO). Mr. Chowdhury was born in a
+                                            very prominent and highly educated family of Bangladesh in 1979. His father is Late Dr. Md. Hamidur Rashid Chowdhury (ENTD).
+                                            <br>After completing his graduation and MBA from a reputed University of London, United Kingdom, Mr. Chowdhury returned to Bangladesh with a dream to do something for the nation and as well as to create some scope for employments for deserving candidates. He always appreciates young people who come up with challenges and encourages them.
+                                            <br>Mr. Chowdhury has a long and successful business profile. He is involved with Garments and Textile sector, IT & Fintech, Export-import, and trading business. Also he is working as a Financial consultant (Foreign Trade finance) with many leading Organizations of Bangladesh. From the last one year he is also involved in Real Estate and Construction business. His Business involvement:
+                                            <br>1.Sufi Apparels.
+                                            <br>2.D-Glitters Ltd.
+                                            <br>3.Gladesh Corporaion.
+                                            <br>4.APL Holdings Ltd.
+                                            <br>5.Gladesh Consultancy.
+                                            <br>He has a complimentary experience in project management and site visit.
                                         </p>
                                     </div>
 
@@ -556,7 +503,7 @@
             </div>
             <div class="accordion-item">
                 <h1 class="accordion-header" id="headingThree">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Synopsis of the<br> Company
                     </button>
@@ -581,44 +528,11 @@
                                     <div class="pl-5 col-md-6 col-12">
                                         <p style="text-transform: uppercase; line-height: 1.4"
                                            class="about-heading show-on-scroll text-white">
-                                            Story of the Company
+                                            Synopsis of the Company
                                         </p>
 
-                                        <p class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Lorem Ipsum is
-                                            simply dummy text of
-                                            the
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text
-                                            ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type
-                                            specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining
-                                            essentially
-                                            unchanged. It was popularised in the 1960s with the release of Letraset
-                                            sheets containing
-                                            Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including
-                                            versions of
-                                            Lorem Ipsum.
+                                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">APL Holdings Ltd. was established and registered in Chattogram City Corporation from June 2019. The company mainly involved in Real Estate and Civil construction work. APLH has an experienced, strong, motivated, innovative and skilled team for doing the best in construction sector as well as a very strong Management for Real Estate. Recurring practice of peruse the excellence the company is to maintain the quality of work with the best workmanship. Our efforts and hard works in technical analysis and troubleshooting will create a new benchmark in the traditional business arena. We are offering Construction, multidisciplinary Management Consulting Services, Architectural, Interior, Civil and Electrical & Mechanical Engineering.
+
                                         </p>
                                     </div>
 
@@ -631,10 +545,10 @@
         </div>
 
         <div class="py-5">
-            <div class=" pl-5 clearfix">
-                <button class="btn btn-primary p-3" onclick="window.location.href='/review'">Add Review</button>
+            <div class=" px-5 clearfix">
+                <button class="btn btn-primary p-3" onclick="window.location.href='/reviews'">Add Review</button>
             </div>
-            <h2 class="text-white text-center">What Our Clients Say</h2>
+            <h2 class="about-heading2 text-white text-center">What Our Clients Say</h2>
             <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach($reviews as $key=>$review)
@@ -647,35 +561,39 @@
                             <p class="person-name">{{$review->user_name}}<br><span
                                         style="color: #cccccc">{{$review->user_designation}}</span></p>
                         </div>
-                    @endforeach
-                    <div class="carousel-item">
-                        <img src="https://phantom-marca.unidadeditorial.es/c539cc91d18e6c38f9a012895541fe05/resize/660/f/webp/assets/multimedia/imagenes/2022/01/04/16412921913965.jpg"
-                             class="d-block carousel-image" alt="...">
-                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has
-                            survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p class="person-name">Alon Mask<br><span style="color: #cccccc">CEO of Amazon</span></p>
+{{--                        <div class="carousel-item">--}}
+{{--                            <img src="{{$review->user_image}}"--}}
+{{--                                 class="d-block carousel-image" alt="...">--}}
+{{--                            <p class="quote">--}}
+{{--                                {{$review->review_description}}--}}
+{{--                            </p>--}}
+{{--                            <p class="person-name">{{$review->user_name}}<br><span style="color: #cccccc">{{$review->user_designation}}</span></p>--}}
 
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987"
-                             class="d-block carousel-image" alt="...">
-                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has
-                            survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p class="person-name">Bill Gates <br><span style="color: #cccccc">CEO of Amazon</span></p>
-                    </div>
+{{--                        </div>--}}
+                    @endforeach
+
+{{--                    <div class="carousel-item">--}}
+{{--                        <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987"--}}
+{{--                             class="d-block carousel-image" alt="...">--}}
+{{--                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.--}}
+{{--                            Lorem Ipsum--}}
+{{--                            has been the industry's standard dummy text ever since the 1500s, when an unknown--}}
+{{--                            printer took a galley of type and scrambled it to make a type specimen book. It has--}}
+{{--                            survived not only five centuries, but also the leap into electronic typesetting,--}}
+{{--                            remaining essentially unchanged. It was popularised in the 1960s with the release of--}}
+{{--                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop--}}
+{{--                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>--}}
+{{--                        <p class="person-name">Bill Gates <br><span style="color: #cccccc">CEO of Amazon</span></p>--}}
+{{--                    </div>--}}
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
 

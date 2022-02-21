@@ -20,6 +20,22 @@
         }
     }
 
+
+    .qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner.qodef-grid {
+        padding: 100px 6vw;
+    }
+
+    @media screen and (max-device-width: 1024px){
+        .qodef-footer-top-inner.qodef-grid{
+            max-width: 100vw;
+        }
+        .qodef-page-footer .qodef-column-content.qodef-grid-col-3{
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     @media screen and (max-device-width: 729px) {
         .qodef-footer-top-inner.qodef-grid {
             width: 80vw;

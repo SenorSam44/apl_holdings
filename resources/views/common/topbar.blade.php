@@ -30,6 +30,9 @@
         color: #CAA65B;
     }
 
+    .fp-header:hover{
+        background-color: black!important;
+    }
     @media screen and (min-width: 1024px) {
         html.theme-white .fp-header-search .fp-hs-toggle, .seniorpartner .fp-header-search .fp-hs-toggle, .partner .fp-header-search .fp-hs-toggle, .fp-header-content-over .fp-header-search .fp-hs-toggle {
             background: url(/frontend/assets/img/search-white.svg) center center no-repeat transparent;

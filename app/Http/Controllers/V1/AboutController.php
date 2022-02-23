@@ -102,11 +102,11 @@ class AboutController extends Controller
         //dd($request->all());
         $id = $request->inputId;
 
-        $data = DB::table('abouts')
-                        ->select('about_image')
-                        ->where('id',$id)
-                        ->first();
-        unlink($data->about_image);
+//        $data = DB::table('abouts')
+//                        ->select('about_image')
+//                        ->where('id',$id)
+//                        ->first();
+//        unlink($data->about_image);
         $success = DB::table('abouts')->where('id', '=', $id)->delete();
         return redirect()->back()->with('msg','About deleted with image  successfully!');
         

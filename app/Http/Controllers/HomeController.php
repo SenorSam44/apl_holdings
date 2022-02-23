@@ -268,8 +268,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        $abouts = DB::table('abouts')->get();
-        $reviews = Review::all();
+        $abouts = DB::table('abouts')->where('publication_status', 1)->get();
+        $reviews = Review::where('publication_status', 1)->get();;
         return view('frontend.single.about_us', [
             'abouts' => $abouts,
             'reviews' => $reviews,

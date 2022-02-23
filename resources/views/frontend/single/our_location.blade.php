@@ -1,6 +1,6 @@
 @extends('layouts.userapp')
 
-@section('content')
+@push('head-script')
     <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap"
             rel="stylesheet">
@@ -16,7 +16,7 @@
         }
 
         .contact.section-padding a, h2, .contact-info .contact-info-title, p, .breadcrumb-item, .breadcrumb-item a{
-            color: white!important;
+            color: #CAA65B!important;
         }
         p a, .breadcrumb-item, .breadcrumb-item a{
             opacity: 1;
@@ -29,7 +29,11 @@
         }
 
     </style>
+@endpush
 
+@section('content')
+    <script src="{{ asset('frontend')}}/assets/js/core.min.js"></script>
+    <script src="{{ asset('frontend')}}/assets/js/script.js"></script>
     <div class="bg-dark" style="margin-top: 78px; height: calc(100vh - 78px)">
         <div class="map-wrapper">
         </div>
@@ -59,7 +63,7 @@
 
         <!-- =======================* Section Start *===================== -->
         <section class="clients section-padding d-md-none d-block p-0" style="position: fixed; bottom: 0;">
-            <div class="container" style="height: calc(100vh - 65vh - 3.125rem); display: flex; align-items: center">
+            <div class="container" style="height: calc(100vh - 65vh - 3.125rem); display: flex; align-items: center; max-width: 100vw; width: 100vw">
                 <div id="office-location-slider" class="owl-carousel owl-theme m-auto">
                     @foreach($our_locations as $key => $our_location)
                         <div class="item" style="position: relative;">
@@ -70,7 +74,15 @@
                     @endforeach
                 </div>
             </div>
-{{--            @include('common.footer')--}}
+            <div class="container-copyright">
+                <div class="left1">
+                    Copyright &copy; 2021 APL Holdings. All rights are reserved.
+                </div>
+                <div class="right1">
+                    Developed by Aamiri E-Ccentric Services.
+                </div>
+            </div>
+            {{--            @include('common.footer')--}}
         </section>
         <!-- =======================* Section End *======================= -->
 
@@ -120,11 +132,11 @@
             }
             .location-box-label {
                 width: 100%;
-                top: calc(45% - 16px);
+                top: 100%;
                 margin: 0 20px;
             }
             #office-location-slider .owl-stage-outer{
-                margin-top: 7vh;
+                margin-top: 3vh;
             }
         }
     </style>
@@ -281,7 +293,7 @@
         .container-social ul li {
             padding: 20px;
             text-align: center;
-            color: white;
+            color: #CAA65B;
             border: yellow 0px solid;
             margin: 0 auto;
         }
@@ -298,14 +310,14 @@
             width: 50%;
             float: left;
             margin: 0;
-            border: red 0 solid;
+            text-align: left;
         }
 
         .right1 {
             width: 50%;
             float: right;
             margin: 0;
-            border: red 0 solid;
+            text-align: right;
 
         }
 
@@ -313,7 +325,7 @@
             margin: 0 auto;
             padding: 10px;
             font-size: 14px;
-            color: white;
+            color: #CAA65B;
             background: black;
         }
 
@@ -333,9 +345,9 @@
             .container-copyright {
                 width: 100vw;
                 text-align: left;
-                background: #dedede;
+                /*background: #dedede;*/
                 border: red 0px solid;
-                padding: 10px;
+                /*padding: 10px;*/
                 justify-content: space-between;
             }
 

@@ -34,6 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Cairo|Open+Sans:300,400,600" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{asset('/static/css/main.css')}}"/>
+    <link href="/static/css/main2.css" rel="stylesheet">
 
     <script type="text/javascript" src="/"></script>
     <script>
@@ -51,7 +52,7 @@
     </script>
     <style>
         body{
-            background: white!important;
+            background: black!important;
             overflow: visible!important;
             color: #CAA65B;
         }
@@ -77,6 +78,8 @@
         });
     </script>
     @stack('head-script')
+    <script src="{{ asset('frontend')}}/assets/js/core.min.js"></script>
+    <script src="{{ asset('frontend')}}/assets/js/script.js"></script>
 </head>
 <body>
 
@@ -285,8 +288,6 @@
 
 <div id="fb-root" data-locale="en_GB"></div>
 
-<script src="{{ asset('frontend')}}/assets/js/core.min.js"></script>
-<script src="{{ asset('frontend')}}/assets/js/script.js"></script>
 <script src="{{asset('/static/js/modernizr.min.js')}}"></script>
 <script src="{{asset('/static/js/lib.js')}}"></script>
 <script src="{{asset('/static/js/main.js')}}"></script>

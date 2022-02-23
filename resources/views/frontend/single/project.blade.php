@@ -1,5 +1,6 @@
 @extends('layouts.userapp')
 @section('content')
+    <link href="/static/css/main2.css" rel="stylesheet">
     <style>
         body{
             background: black;
@@ -129,6 +130,42 @@
             </div>
         </section>
 
+{{--        <section class="component fp-project-gallery  track-on-scroll" data-component-name="project-gallery"--}}
+{{--                 data-files-widths="2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732"--}}
+{{--                 data-files-heights="1536,1536,1536,1534,1536,1536,1536,1536,1536,1536,1534,1536,1536,1536"--}}
+{{--                 data-gallery-files="{{$project_images_string}}"--}}
+{{--                 data-files-colours="#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D,#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D"--}}
+{{--                 data-track-section="unmasked_hero"--}}
+{{--                 data-track-detail="narbo_via"--}}
+{{--                 data-track-scroll-sub-type="gallery_inview"--}}
+{{--                 data-track-scroll-section="unmasked_hero"--}}
+{{--                 data-track-scroll-detail="narbo_via"--}}
+{{--                 data-id="gallery">--}}
+{{--            <div class="fp-pg-dropback">--}}
+{{--                <div class="fp-section-title fp-pg-dropback__cta">--}}
+{{--                    <button type="button" class="fp-button-primary gallery-btn" style="display: none">Gallery</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
+
+{{--        <section class="component fp-project-gallery  track-on-scroll" data-component-name="project-gallery"--}}
+{{--                 data-files-widths="2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732,2732"--}}
+{{--                 data-files-heights="1536,1536,1536,1534,1536,1536,1536,1536,1536,1536,1534,1536,1536,1536"--}}
+{{--                 data-gallery-files="{{$project_images_string}}"--}}
+{{--                 data-files-colours="#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D,#83766B,#95867B,#A19993,#A7ADA5,#76604F,#AA9788,#7D6B5D"--}}
+{{--                 data-track-section="unmasked_hero"--}}
+{{--                 data-track-detail="narbo_via"--}}
+{{--                 data-track-scroll-sub-type="gallery_inview"--}}
+{{--                 data-track-scroll-section="unmasked_hero"--}}
+{{--                 data-track-scroll-detail="narbo_via"--}}
+{{--                 data-id="gallery">--}}
+{{--            <div class="fp-pg-dropback">--}}
+{{--                <div class="fp-section-title fp-pg-dropback__cta">--}}
+{{--                    <button type="button" class="fp-button-primary gallery-btn" style="display: none">Gallery</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
+
         <section class="component fp-project-tabs animate-on-scroll"
                  data-animation-type="fadeUp"
                  data-component-name="project-tabs">
@@ -138,6 +175,8 @@
                     <option style="background: black; color: white" value="description">Description</option>
                     <option style="background: black; color: white" value="factsfigures">Facts and Figures</option>
                     <option style="background: black; color: white" value="gallery">Gallery</option>
+{{--                    <option style="background: black; color: white" value="floorplan">Floor Plan</option>--}}
+{{--                    <option style="background: black; color: white" value="grossier">Grossier</option>--}}
                 </select>
             </div>
 
@@ -168,6 +207,20 @@
                                class="fp-st-link"
                                data-tab="team">Gallery</a>
                         </li>
+
+{{--                        <li class="fp-st-list-item">--}}
+{{--                            <a href="#"--}}
+{{--                               title="Floor plan"--}}
+{{--                               class="fp-st-link"--}}
+{{--                               data-tab="floorplan">Floor Plan</a>--}}
+{{--                        </li>--}}
+
+{{--                        <li class="fp-st-list-item">--}}
+{{--                            <a href="#"--}}
+{{--                               title="Grossier"--}}
+{{--                               class="fp-st-link"--}}
+{{--                               data-tab="grossier">Grossier</a>--}}
+{{--                        </li>--}}
                     </ul>
 
                     <div class="fp-st-indicator">

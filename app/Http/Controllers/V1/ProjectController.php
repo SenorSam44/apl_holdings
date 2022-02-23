@@ -4,6 +4,7 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 
 use App\Models\Project;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -83,6 +84,32 @@ class ProjectController extends Controller
             }
         }
 
+        if ($request->hasFile('floorplan_file')) {
+            $gallery_file_array = [];
+            foreach ($request->file('floorplan_file') as $gallery_file){
+                $name = $max."-".Carbon::now()->toTimeString().".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_videos/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_videos/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $projects['floorplan_file'] = serialize($gallery_file_array);
+        }
+
+        if ($request->hasFile('grossier_file')) {
+            $gallery_file_array = [];
+            foreach ($request->file('grossier_file') as $gallery_file){
+                $name = $max."-".Carbon::now()->toTimeString().".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_videos/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_videos/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $projects['grossier_file'] = serialize($gallery_file_array);
+        }
+
         //print_r($projects);
         $success = DB::table('projects_images')->insert($projects_images);
         return redirect()->back()->with('msg','Project added to database successfully!');
@@ -145,6 +172,32 @@ class ProjectController extends Controller
                 $projects_images['project_image'.$i] = $totalPathName;
                 $success = DB::table('projects_images')->where('project_id',$max)->update($projects_images);
             }
+        }
+
+        if ($request->hasFile('floorplan_file')) {
+            $gallery_file_array = [];
+            foreach ($request->file('floorplan_file') as $gallery_file){
+                $name = $max."-".Carbon::now()->toTimeString().".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_videos/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_videos/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $projects['floorplan_file'] = serialize($gallery_file_array);
+        }
+
+        if ($request->hasFile('grossier_file')) {
+            $gallery_file_array = [];
+            foreach ($request->file('grossier_file') as $gallery_file){
+                $name = $max."-".Carbon::now()->toTimeString().".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_videos/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_videos/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $projects['grossier_file'] = serialize($gallery_file_array);
         }
 
         //print_r($projects);

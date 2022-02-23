@@ -65,12 +65,12 @@
         html.theme-white .fp-navigation .fp-pulse::after, .seniorpartner .fp-navigation .fp-pulse::after, .partner .fp-navigation .fp-pulse::after, .fp-header-content-over .fp-navigation .fp-pulse::after{
             background: white;
         }
-        
+
         @media screen and (max-width: 1024px) {
             .fp-project-types{
                 padding-top: 130px;
             }
-            
+
         }
 
         @media screen and (min-width: 1024px){
@@ -80,7 +80,7 @@
         }
 
         .fp-content-header__title, .fp-content-header__subtitle{
-            color: #CAA65B;
+            color: #CAA65B!important;
         }
 
 

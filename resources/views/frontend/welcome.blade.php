@@ -1,8 +1,15 @@
 @extends('layouts.userapp')
 @section('content')
     <style>
+        body{
+            overflow: hidden!important;
+        }
         .fp-header{
             background: none!important;
+        }
+
+        .page{
+            height: 100vh!important;
         }
 
 

@@ -152,8 +152,7 @@
 
                                 <form action="/search" class="fp-hs-form">
 
-                                    <label for="fp-search-term-navigation" class="fp-hs-label">Search Foster +
-                                        Partners</label>
+                                    <label for="fp-search-term-navigation" class="fp-hs-label">Search APL Holdings</label>
                                     <input type="search" id="fp-search-term-navigation" class="fp-hs-term"
                                            placeholder="Search APL Holdings" data-original-value="" tabindex="-1"/>
 

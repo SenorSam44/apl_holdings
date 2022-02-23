@@ -29,9 +29,12 @@
             background: black;
         }
 
-        .contact.section-padding a, h2, .contact-info .contact-info-title, p, .breadcrumb-item, .breadcrumb-item a {
-            color: white !important;
+        .contact.section-padding a, h2, .contact-info .contact-info-title, .breadcrumb-item, .breadcrumb-item a {
+            color: #CAA65B !important;
         }
+        /*.about-wrapper p{*/
+        /*    color: white;*/
+        /*}*/
 
         p a, .breadcrumb-item, .breadcrumb-item a {
             opacity: 1;
@@ -44,9 +47,9 @@
         .form-control, .form-control:focus, .form-control:hover {
             background: black;
             border: none;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid #CAA65B;
             box-shadow: none;
-            color: white;
+            color: #CAA65B;
 
         }
 
@@ -77,11 +80,14 @@
             position: absolute;
             width: 50px;
             height: 1px;
-            bottom: 50%;
+            bottom: 45%;
             left: calc(50% - 25px);
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid #CAA65B;
         }
 
+        .text-golden, .quote, .person-name {
+            color: #CAA65B!important;
+        }
         @media screen and (min-width: 1024px) {
             .fp-navigation .fp-nav-list-wrap {
                 top: 25px;
@@ -110,7 +116,7 @@
         }
 
         .tab-container .tab.active {
-            border-right: 2px solid white;
+            border-right: 2px solid #CAA65B;
         }
 
         .tab-wrapper .tab-content:not(.active) {
@@ -124,7 +130,7 @@
         /* accordian overwrite*/
         .accordion-item, .accordion-button, .accordion-button:focus, .accordion-button:not(.collapsed) {
             background: black;
-            color: white;
+            color: #CAA65B;
             box-shadow: none;
         }
 
@@ -180,9 +186,9 @@
             position: absolute;
             bottom: 0;
             left: calc(50% - 15px);
-            width: 0px;
+            width: 0;
             height: 2px;
-            background: white;
+            background: #CAA65B;
             transform: translateX(50%) scaleX(0.5) translateX(-100%) scaleX(0);
             transition: transform 0.5s ease-out;
         }
@@ -250,7 +256,7 @@
             opacity: 0.7;
         }
 
-        .about-heading, about-heading2 {
+        .about-heading, .about-heading2 {
             font-size: 40px;
             word-spacing: 20px;
         }
@@ -272,7 +278,7 @@
 
         .paragraph-text li::before {
             content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            color: white; /* Change the color */
+            color: #CAA65B; /* Change the color */
             font-weight: bold; /* If you want it to be bold */
             display: inline-block; /* Needed to add space between the bullet and the text */
             width: 1em; /* Also needed for space (tweak if needed) */
@@ -335,295 +341,297 @@
     </style>
 
     <!-- =======================* Section Start *======================= -->
-    <section class="pagehead bg-1" style="background: black">
-        <div class="container">
-            <nav aria-label="breadcrumb" class="pagehead-breadcrumb">
-                <h1 class="text-white text-center ">About us</h1>
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item">Home</li>
-                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                </ol>
-            </nav>
-        </div>
-    </section>
-    <div style="color: white; background: black">
-        <p style="font-size: 14px" class="text-white m-5 p-3 text-md-center text-justify">To contribute in the growing Real Estate Sector and also to contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”
-        </p>
-
-        <div style="position: relative" class="sotc-wrapper">
-            <img style="width: 100vw; height: 100%; opacity: 0.3" src="./frontend/assets/img/user-img-3.jpg"
-                 alt="image of building"/>
-            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
-                 class="show-on-scroll sotc-brown-back">
-
-            </div>
-            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
-                <div class="row py-md-3 py-0">
-                    <div class="offset-md-2 col-md-2 offset-0 col-12 text-right">
-                        <img class="about-large-image ml-3 ml-md-0 show-on-scroll w-100 mt-3"
-                             src="./frontend/assets/img/user-img-3.jpg"
-                             alt="image of building"/>
-                    </div>
-                    <div class="pl-5 ml-md-0 ml-2 pr-md-0 pr-4 col-md-6 col-12">
-                        <p style="text-transform: uppercase; line-height: 1.4"
-                           class="about-heading show-on-scroll text-white">
-                            Story of the Company
-                        </p>
-
-                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
-
-                            <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <section class="work-process-section row my-5 p-3">
-            <div class="offset-md-2 offset-0 col-md-5 col-12">
-                <h2 class="about-heading2 text-white">Work Process</h2>
-                <h3 class="medium-text text-white">To contribute in the growing Real Estate Sector and also to
-                    contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”</h3>
-                <div class="row tab-wrapper">
-                    <ul class="col-4 tab-container">
-                        @foreach($abouts as $key=>$about)
-                            <li class="tab {{$key==0? 'active': ''}} ">{{$about->about_title}}</li>
-                        @endforeach
-                    </ul>
-                    @foreach($abouts as $key=>$about)
-                        <ul class="paragraph-text col-8 tab-content {{$key==0? 'active': ''}}">
-                            <?php
-                            $description = $about->about_description;
-                            $description = preg_replace("/\r\n|\r|\n/", '</li><li>', $description);
-                            echo '<li>', $description, '</li>';
-                            ?>
-                            {{--                            {{'<li>'.preg_replace("/\r\n|\r|\n/", '</li><li>', $about->about_description).'</li>'}}--}}
-                        </ul>
-                    @endforeach
-                </div>
-
-            </div>
-            <div class="col-md-3 col-12">
-                <img class="about-large-image w-100" style="height: auto" src="./frontend/assets/img/user-img-3.jpg"
-                     alt="image of building"/>
-            </div>
-        </section>
-
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h1 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Story of the<br> Company
-                    </button>
-                </h1>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div style="position: relative" class="sotc-wrapper">
-                            <img style="width: 100vw; height: 100%; opacity: 0.3"
-                                 src="./frontend/assets/img/user-img-3.jpg"
-                                 alt="image of building"/>
-                            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
-                                 class="show-on-scroll sotc-brown-back">
-                            </div>
-                            <div style="position: absolute; top: 0;" class="sotc-main-cotent">
-                                <div class="row py-3">
-                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
-                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
-                                             src="./frontend/assets/img/user-img-3.jpg"
-                                             alt="image of building"/>
-                                    </div>
-                                    <div class="pl-5 col-md-6 col-12">
-                                        <p style="text-transform: uppercase; line-height: 1.4"
-                                           class="about-heading show-on-scroll text-white">
-                                            Story of the Company</p>
-
-                                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
-                                            <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h1 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Director and CEO <br> Mr. Habib Chowdhury
-                    </button>
-                </h1>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div style="position: relative" class="sotc-wrapper">
-                            <img style="width: 100vw; height: 100%; opacity: 0.3"
-                                 src="./frontend/assets/img/user-img-3.jpg"
-                                 alt="image of building"/>
-                            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
-                                 class="show-on-scroll sotc-brown-back">
-                            </div>
-                            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
-                                <div class="row py-3">
-                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
-                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
-                                             src="./frontend/assets/img/user-img-3.jpg"
-                                             alt="image of building"/>
-                                    </div>
-                                    <div class="pl-5 col-md-6 col-12">
-                                        <p style="text-transform: uppercase; line-height: 1.4"
-                                           class="about-heading show-on-scroll text-white">
-                                            Mr.Habib Chowdhury
-                                        </p>
-
-                                        <p style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Mr. Habib Chowdhury is one of the Director of Board of Directors and looking after the business as Chief Executive Officer (CEO). Mr. Chowdhury was born in a
-                                            very prominent and highly educated family of Bangladesh in 1979. His father is Late Dr. Md. Hamidur Rashid Chowdhury (ENTD).
-                                            <br>After completing his graduation and MBA from a reputed University of London, United Kingdom, Mr. Chowdhury returned to Bangladesh with a dream to do something for the nation and as well as to create some scope for employments for deserving candidates. He always appreciates young people who come up with challenges and encourages them.
-                                            <br>Mr. Chowdhury has a long and successful business profile. He is involved with Garments and Textile sector, IT & Fintech, Export-import, and trading business. Also he is working as a Financial consultant (Foreign Trade finance) with many leading Organizations of Bangladesh. From the last one year he is also involved in Real Estate and Construction business. His Business involvement:
-                                            <br>1.Sufi Apparels.
-                                            <br>2.D-Glitters Ltd.
-                                            <br>3.Gladesh Corporaion.
-                                            <br>4.APL Holdings Ltd.
-                                            <br>5.Gladesh Consultancy.
-                                            <br>He has a complimentary experience in project management and site visit.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h1 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Synopsis of the<br> Company
-                    </button>
-                </h1>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div style="position: relative" class="sotc-wrapper">
-                            <img style="width: 100vw; height: 100%; opacity: 0.3"
-                                 src="./frontend/assets/img/user-img-3.jpg"
-                                 alt="image of building"/>
-                            <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
-                                 class="show-on-scroll sotc-brown-back">
-                            </div>
-                            <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
-                                <div class="row py-3">
-                                    <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
-                                        <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
-                                             src="./frontend/assets/img/user-img-3.jpg"
-                                             alt="image of building"/>
-                                    </div>
-                                    <div class="pl-5 col-md-6 col-12">
-                                        <p style="text-transform: uppercase; line-height: 1.4"
-                                           class="about-heading show-on-scroll text-white">
-                                            Synopsis of the Company
-                                        </p>
-
-                                        <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">APL Holdings Ltd. was established and registered in Chattogram City Corporation from June 2019. The company mainly involved in Real Estate and Civil construction work. APLH has an experienced, strong, motivated, innovative and skilled team for doing the best in construction sector as well as a very strong Management for Real Estate. Recurring practice of peruse the excellence the company is to maintain the quality of work with the best workmanship. Our efforts and hard works in technical analysis and troubleshooting will create a new benchmark in the traditional business arena. We are offering Construction, multidisciplinary Management Consulting Services, Architectural, Interior, Civil and Electrical & Mechanical Engineering.
-
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="py-5">
-            <div class=" px-5 clearfix">
-                <button class="btn btn-primary p-3" onclick="window.location.href='/reviews'">Add Review</button>
-            </div>
-            <h2 class="about-heading2 text-white text-center">What Our Clients Say</h2>
-            <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    @foreach($reviews as $key=>$review)
-                        <div class="carousel-item {{$key==1? 'active': ''}}">
-                            <img src="{{$review->user_image}}"
-                                 class="d-block carousel-image" alt="...">
-                            <p class="quote">
-                                {{$review->review_description}}
-                            </p>
-                            <p class="person-name">{{$review->user_name}}<br><span
-                                        style="color: #cccccc">{{$review->user_designation}}</span></p>
-                        </div>
-{{--                        <div class="carousel-item">--}}
-{{--                            <img src="{{$review->user_image}}"--}}
-{{--                                 class="d-block carousel-image" alt="...">--}}
-{{--                            <p class="quote">--}}
-{{--                                {{$review->review_description}}--}}
-{{--                            </p>--}}
-{{--                            <p class="person-name">{{$review->user_name}}<br><span style="color: #cccccc">{{$review->user_designation}}</span></p>--}}
-
-{{--                        </div>--}}
-                    @endforeach
-
-{{--                    <div class="carousel-item">--}}
-{{--                        <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987"--}}
-{{--                             class="d-block carousel-image" alt="...">--}}
-{{--                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.--}}
-{{--                            Lorem Ipsum--}}
-{{--                            has been the industry's standard dummy text ever since the 1500s, when an unknown--}}
-{{--                            printer took a galley of type and scrambled it to make a type specimen book. It has--}}
-{{--                            survived not only five centuries, but also the leap into electronic typesetting,--}}
-{{--                            remaining essentially unchanged. It was popularised in the 1960s with the release of--}}
-{{--                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop--}}
-{{--                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>--}}
-{{--                        <p class="person-name">Bill Gates <br><span style="color: #cccccc">CEO of Amazon</span></p>--}}
-{{--                    </div>--}}
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-        <section class="clients section-padding">
+    <div class="about-wrapper">
+        <section class="pagehead bg-1" style="background: black">
             <div class="container">
-                <div id="clients" class="owl-carousel owl-theme">
-                    <div class="item" style="position: relative">
-                        <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/04/client-carousel-3-light.png"
-                             alt="Clients"
-                             class="img-fluid saturate-animate">
-                        <div class="image-underline"></div>
-                    </div>
-                    <div class="item">
-                        <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/04/client-carousel-2-light.png"
-                             alt="Clients"
-                             class="img-fluid saturate-animate">
-                        <div class="image-underline"></div>
+                <nav aria-label="breadcrumb" class="pagehead-breadcrumb">
+                    <h1 class="text-golden  text-center ">About us</h1>
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <div style="color: #CAA65B; background: black">
+            <p style="font-size: 14px" class="text-golden  m-5 p-3 text-md-center text-justify">To contribute in the growing Real Estate Sector and also to contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”
+            </p>
+
+            <div style="position: relative" class="sotc-wrapper">
+                <img style="width: 100vw; height: 100%;" src="./frontend/assets/img/apl_b_profile.jpg"
+                     alt="image of building"/>
+                <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                     class="show-on-scroll sotc-brown-back">
+
+                </div>
+                <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                    <div class="row py-md-3 py-0">
+                        <div class="offset-md-2 col-md-2 offset-0 col-12 text-right">
+                            <img class="about-large-image ml-3 ml-md-0 show-on-scroll w-100 mt-3"
+                                 src="./frontend/assets/img/apl_1_logo.png"
+                                 alt="image of building"/>
+                        </div>
+                        <div class="pl-5 ml-md-0 ml-2 pr-md-0 pr-4 col-md-6 col-12">
+                            <p style="text-transform: uppercase; line-height: 1.4"
+                               class="about-heading show-on-scroll text-golden ">
+                                Story of the Company
+                            </p>
+
+                            <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
+
+                                <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
+                            </p>
+                        </div>
 
                     </div>
-                    <div class="item">
-                        <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/05/client-carousel-1-light.png"
-                             alt="Clients"
-                             class="img-fluid saturate-animate">
-                        <div class="image-underline"></div>
+                </div>
+
+            </div>
+
+            <section class="work-process-section row my-5 p-3">
+                <div class="offset-md-2 offset-0 col-md-5 col-12">
+                    <h2 class="about-heading2 text-golden ">Work Process</h2>
+                    <h3 class="medium-text text-golden ">To contribute in the growing Real Estate Sector and also to
+                        contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”</h3>
+                    <div class="row tab-wrapper">
+                        <ul class="col-4 tab-container">
+                            @foreach($abouts as $key=>$about)
+                                <li class="tab {{$key==0? 'active': ''}} ">{{$about->about_title}}</li>
+                            @endforeach
+                        </ul>
+                        @foreach($abouts as $key=>$about)
+                            <ul class="paragraph-text col-8 tab-content {{$key==0? 'active': ''}}">
+                                <?php
+                                $description = $about->about_description;
+                                $description = preg_replace("/\r\n|\r|\n/", '</li><li>', $description);
+                                echo '<li>', $description, '</li>';
+                                ?>
+                                {{--                            {{'<li>'.preg_replace("/\r\n|\r|\n/", '</li><li>', $about->about_description).'</li>'}}--}}
+                            </ul>
+                        @endforeach
                     </div>
 
                 </div>
-            </div>
-        </section>
+                <div class="col-md-3 col-12">
+                    <img class="about-large-image w-100" style="height: auto" src="./frontend/assets/img/apl3_logo_white.jpg"
+                         alt="image of building"/>
+                </div>
+            </section>
 
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h1 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Story of the<br> Company
+                        </button>
+                    </h1>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div style="position: relative" class="sotc-wrapper">
+                                <img style="width: 100vw; height: 100%;"
+                                     src="./frontend/assets/img/apl_b_profile.jpg"
+                                     alt="image of building"/>
+                                <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                                     class="show-on-scroll sotc-brown-back">
+                                </div>
+                                <div style="position: absolute; top: 0;" class="sotc-main-cotent">
+                                    <div class="row py-3">
+                                        <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                            <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
+                                                 src="./frontend/assets/img/apl_1_logo.png"
+                                                 alt="image of building"/>
+                                        </div>
+                                        <div class="pl-5 col-md-6 col-12">
+                                            <p style="text-transform: uppercase; line-height: 1.4"
+                                               class="about-heading show-on-scroll text-golden ">
+                                                Story of the Company</p>
+
+                                            <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">The company started with some new lands for developing for the real middle-class income generated people with a great thinking to ensure their dream of an own home. At the same time the company started with some civil construction work with Electrical and Mechanical management in industry level. Now the company is moving for Government licenses to start local Government civil works.
+                                                <br>The abovementioned young men have already set up a highly experienced and innovative team for their smooth work. Within this short period the company already handed over some critical projects and at present working with some new projects.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h1 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Director and CEO <br> Mr. Habib Chowdhury
+                        </button>
+                    </h1>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div style="position: relative" class="sotc-wrapper">
+                                <img style="width: 100vw; height: 100%;"
+                                     src="./frontend/assets/img/apl_b_profile.jpg"
+                                     alt="image of building"/>
+                                <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                                     class="show-on-scroll sotc-brown-back">
+                                </div>
+                                <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                                    <div class="row py-3">
+                                        <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                            <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
+                                                 src="./frontend/assets/img/user-img-3.jpg"
+                                                 alt="image of building"/>
+                                        </div>
+                                        <div class="pl-5 col-md-6 col-12">
+                                            <p style="text-transform: uppercase; line-height: 1.4"
+                                               class="about-heading show-on-scroll text-golden ">
+                                                Mr.Habib Chowdhury
+                                            </p>
+
+                                            <p style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">Mr. Habib Chowdhury is one of the Director of Board of Directors and looking after the business as Chief Executive Officer (CEO). Mr. Chowdhury was born in a
+                                                very prominent and highly educated family of Bangladesh in 1979. His father is Late Dr. Md. Hamidur Rashid Chowdhury (ENTD).
+                                                <br>After completing his graduation and MBA from a reputed University of London, United Kingdom, Mr. Chowdhury returned to Bangladesh with a dream to do something for the nation and as well as to create some scope for employments for deserving candidates. He always appreciates young people who come up with challenges and encourages them.
+                                                <br>Mr. Chowdhury has a long and successful business profile. He is involved with Garments and Textile sector, IT & Fintech, Export-import, and trading business. Also he is working as a Financial consultant (Foreign Trade finance) with many leading Organizations of Bangladesh. From the last one year he is also involved in Real Estate and Construction business. His Business involvement:
+                                                <br>1.Sufi Apparels.
+                                                <br>2.D-Glitters Ltd.
+                                                <br>3.Gladesh Corporaion.
+                                                <br>4.APL Holdings Ltd.
+                                                <br>5.Gladesh Consultancy.
+                                                <br>He has a complimentary experience in project management and site visit.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h1 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Synopsis of the<br> Company
+                        </button>
+                    </h1>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div style="position: relative" class="sotc-wrapper">
+                                <img style="width: 100vw; height: 100%;"
+                                     src="./frontend/assets/img/apl_b_profile.jpg"
+                                     alt="image of building"/>
+                                <div style="background: #876524; position: absolute; bottom: 1rem; width: 100vw;"
+                                     class="show-on-scroll sotc-brown-back">
+                                </div>
+                                <div style="position: absolute; top: 0; width: calc(100vw - 30px)" class="sotc-main-cotent">
+                                    <div class="row py-3">
+                                        <div class="offset-md-2 offset-0 col-md-2 col-12 text-right">
+                                            <img class="about-large-image show-on-scroll w-100 mt-md-3 mt-0"
+                                                 src="./frontend/assets/img/apl_1_logo.png"
+                                                 alt="image of building"/>
+                                        </div>
+                                        <div class="pl-5 col-md-6 col-12">
+                                            <p style="text-transform: uppercase; line-height: 1.4"
+                                               class="about-heading show-on-scroll text-golden ">
+                                                Synopsis of the Company
+                                            </p>
+
+                                            <p  style="padding-right: 2.5rem" class="show-on-scroll text-white mt-md-3 pt-md-5 text-justify">APL Holdings Ltd. was established and registered in Chattogram City Corporation from June 2019. The company mainly involved in Real Estate and Civil construction work. APLH has an experienced, strong, motivated, innovative and skilled team for doing the best in construction sector as well as a very strong Management for Real Estate. Recurring practice of peruse the excellence the company is to maintain the quality of work with the best workmanship. Our efforts and hard works in technical analysis and troubleshooting will create a new benchmark in the traditional business arena. We are offering Construction, multidisciplinary Management Consulting Services, Architectural, Interior, Civil and Electrical & Mechanical Engineering.
+
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5">
+                <div class=" px-5 clearfix">
+                    <button class="btn btn-primary p-3" onclick="window.location.href='/reviews'">Add Review</button>
+                </div>
+                <h2 class="about-heading2 text-golden text-center">What Our Clients Say</h2>
+                <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach($reviews as $key=>$review)
+                            <div class="carousel-item {{$key==1? 'active': ''}}">
+                                <img src="{{$review->user_image}}"
+                                     class="d-block carousel-image" alt="...">
+                                <p class="quote">
+                                    {{$review->review_description}}
+                                </p>
+                                <p class="person-name">{{$review->user_name}}<br><span
+                                            style="opacity: 0.7">{{$review->user_designation}}</span></p>
+                            </div>
+                            {{--                        <div class="carousel-item">--}}
+                            {{--                            <img src="{{$review->user_image}}"--}}
+                            {{--                                 class="d-block carousel-image" alt="...">--}}
+                            {{--                            <p class="quote">--}}
+                            {{--                                {{$review->review_description}}--}}
+                            {{--                            </p>--}}
+                            {{--                            <p class="person-name">{{$review->user_name}}<br><span style="color: #cccccc">{{$review->user_designation}}</span></p>--}}
+
+                            {{--                        </div>--}}
+                        @endforeach
+
+                        {{--                    <div class="carousel-item">--}}
+                        {{--                        <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987"--}}
+                        {{--                             class="d-block carousel-image" alt="...">--}}
+                        {{--                        <p class="quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry.--}}
+                        {{--                            Lorem Ipsum--}}
+                        {{--                            has been the industry's standard dummy text ever since the 1500s, when an unknown--}}
+                        {{--                            printer took a galley of type and scrambled it to make a type specimen book. It has--}}
+                        {{--                            survived not only five centuries, but also the leap into electronic typesetting,--}}
+                        {{--                            remaining essentially unchanged. It was popularised in the 1960s with the release of--}}
+                        {{--                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop--}}
+                        {{--                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>--}}
+                        {{--                        <p class="person-name">Bill Gates <br><span style="color: #cccccc">CEO of Amazon</span></p>--}}
+                        {{--                    </div>--}}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <section class="clients section-padding">
+                <div class="container">
+                    <div id="clients" class="owl-carousel owl-theme">
+                        <div class="item" style="position: relative">
+                            <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/04/client-carousel-3-light.png"
+                                 alt="Clients"
+                                 class="img-fluid saturate-animate">
+                            <div class="image-underline"></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/04/client-carousel-2-light.png"
+                                 alt="Clients"
+                                 class="img-fluid saturate-animate">
+                            <div class="image-underline"></div>
+
+                        </div>
+                        <div class="item">
+                            <img src="https://ratio.qodeinteractive.com/wp-content/uploads/2016/05/client-carousel-1-light.png"
+                                 alt="Clients"
+                                 class="img-fluid saturate-animate">
+                            <div class="image-underline"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </div>
 
     @include('common.footer')

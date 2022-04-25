@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
 use App\Models\Category;
+use App\Models\Messages;
 use App\Models\Project;
 use App\Models\Review;
 use App\OfficeLocation;
@@ -281,6 +283,14 @@ class HomeController extends Controller
         return view('frontend.single.contacts');
     }
 
+    public function career()
+    {
+        $posts = Career::where('publication_status', 1)->get();
+        return view('frontend.single.career', [
+            'posts'=>$posts,
+        ]);
+    }
+
     public function moreabout()
     {
         return view('frontend.single.moreabout');
@@ -356,5 +366,30 @@ class HomeController extends Controller
         $projects = $projects->toArray();
 
         return response()->json($projects);
+    }
+
+    public function dropCV(Request $request){
+//        if ($request->hasFile('app_cv')){
+//            $max = Messages::max('id');
+//            $cv = $request->file('appcv');
+//            $name = $max.'.'.$cv->getClientOriginalExtension();
+//            $destinationPath = public_path('uploaded_images/cv');
+//            $cv->move($destinationPath, $name);
+//            $totalPathName = 'uploaded_images/cv'.$name;
+//        }
+
+        $message = Messages::create([
+            'user_name' => $request->name,
+            'subject' => $request->subject,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'message' => $request->message,
+//            'CV' => isset($totalPathName)? $totalPathName: null,
+            'CV' => $request->appcv,
+            'postID' => $request->postID,
+            'publication_status' => 0,
+        ]);
+
+        return back()->with('msg', 'CV dropped successfully');
     }
 }

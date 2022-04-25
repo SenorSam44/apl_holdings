@@ -75,7 +75,7 @@
         </li>
 
         <li>
-            <a href="#"><i class="fa fa-product-hunt fa-fw"></i> News and Events <span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> News and Events <span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
                 <li>
                     <a href="{{URL::to('admin/new')}}">Add News</a>
@@ -127,6 +127,21 @@
             <ul class="nav nav-second-level">
                 <li>
                     <a href="{{URL::to('admin/messages')}}">Manage Messages</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#"><i class="fa fa-male fa-fw"></i>  Career <span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="{{route('career.create')}}">Add Post</a>
+                </li>
+                <li>
+                    <a href="{{route('career.index')}}">Manage Posts</a>
+                </li>
+                <li>
+                    <a href="{{URL::to('admin/managecv')}}">Manage CV</a>
                 </li>
             </ul>
         </li>

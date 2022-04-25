@@ -213,6 +213,10 @@
                 <li class="fp-nav-list-item nav-link" data-target="/map">
                     <a href="/map">Map</a>
                 </li>
+
+                <li class="fp-nav-list-item nav-link" data-target="/map">
+                    <a href="/career">Career</a>
+                </li>
             </ul>
 
         </div>

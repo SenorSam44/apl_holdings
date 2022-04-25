@@ -302,6 +302,10 @@
             font-size: 25px;
         }
 
+        .aboutus-first-paragraph{
+            font-size: 18px;
+        }
+
         @media screen and (max-width: 729px) {
             .tab-container .tab {
                 padding: 8px 0;
@@ -336,6 +340,10 @@
                 margin-left: 0;
                 text-align: end;
             }
+
+            .aboutus-first-paragraph{
+                font-size: 14px;
+            }
         }
 
     </style>
@@ -354,7 +362,7 @@
             </div>
         </section>
         <div style="color: #CAA65B; background: black">
-            <p style="font-size: 14px" class="text-golden  m-5 p-3 text-md-center text-justify">To contribute in the growing Real Estate Sector and also to contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”
+            <p class="aboutus-first-paragraph text-golden  m-5 p-3 text-md-center text-justify">To contribute in the growing Real Estate Sector and also to contribute in development of the country by modern construction of industries, Roads, Bridges a young man named Mr. Habib Chowdhury along with Mr. Belal Ahmed (Managing Director,Unitex Group) started a new company named “APL Holdings Ltd.”
             </p>
 
             <div style="position: relative" class="sotc-wrapper">
@@ -413,7 +421,7 @@
 
                 </div>
                 <div class="col-md-3 col-12">
-                    <img class="about-large-image w-100" style="height: auto" src="./frontend/assets/img/apl3_logo_white.jpg"
+                    <img class="about-large-image w-100 show-on-scroll" style="height: auto" src="./frontend/assets/img/apl_we_are_here.png"
                          alt="image of building"/>
                 </div>
             </section>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\CareerController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -53,6 +54,8 @@ Route::get('news', [HomeController::class, 'news']);
 Route::get('services', [HomeController::class, 'services']);
 Route::get('reviews', [HomeController::class, 'reviews']);
 Route::get('contacts', [HomeController::class, 'contacts']);
+Route::get('career', [HomeController::class, 'career']);
+Route::post('drop-cv', [HomeController::class, 'dropCV'])->name("drop-cv");
 Route::get('moreabout', [HomeController::class, 'moreabout']);
 
 Route::post('add-review', [ReviewController::class, 'store']);
@@ -174,10 +177,16 @@ Route::middleware('auth:web')->group(function () {
 	    Route::post('/activate-review', [ReviewController::class, 'activateReview']);
 	    Route::post('/deactivate-review', [ReviewController::class, 'deactivateReview']);
 
-        //Review
+        // Office location
         Route::resource('office-location', OfficeController::class);
         Route::post('delete-office-location', [ App\Http\Controllers\OfficeController::class, 'destroy']);
 
+        // Career
+        Route::resource('career', V1\CareerController::class);
+        Route::post('/activate-career', [\App\Http\Controllers\V1\CareerController::class, 'activateCareer']);
+        Route::get('managecv', [CareerController::class, 'manageCV']);
+
+        // Message
         Route::get('/messages', [MessageController::class, 'index']);
 		Route::post('/activate-message', [MessageController::class, 'activateMessage']);
 		Route::post('/delete-message', [MessageController::class, 'destroy']);

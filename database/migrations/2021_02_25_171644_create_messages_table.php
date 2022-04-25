@@ -20,7 +20,8 @@ class CreateMessagesTable extends Migration
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->text('message')->nullable();
-            
+            $table->text("CV")->nullable();
+            $table->bigInteger("postID")->nullable();
             $table->boolean('publication_status')->default(0);
             $table->timestamps();
         });

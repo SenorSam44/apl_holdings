@@ -83,6 +83,18 @@ class ProjectController extends Controller
                 $projects_images['project_image'.$i] = $totalPathName;
             }
         }
+        if ($request->hasFile('image360')) {
+            $gallery_file_array = [];
+            foreach ($request->file('image360') as $key => $gallery_file){
+                $name = $max."-".$key."-".Carbon::now()->timestamp.".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_images/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_images/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $visualizations['image360'] = serialize($gallery_file_array);
+        }
 
         if ($request->hasFile('floorplan_file')) {
             $gallery_file_array = [];
@@ -172,6 +184,34 @@ class ProjectController extends Controller
                 $projects_images['project_image'.$i] = $totalPathName;
                 $success = DB::table('projects_images')->where('project_id',$max)->update($projects_images);
             }
+        }
+
+        if ($request->hasFile('image360')) {
+            $gallery_file_array = [];
+            foreach ($request->file('image360') as $key => $gallery_file){
+                $name = $id."-".$key."-".Carbon::now()->timestamp.".".$gallery_file->getClientOriginalExtension();
+                $destinationPath = public_path('uploaded_images/projects');
+                $gallery_file->move($destinationPath, $name);
+
+                $totalPathName = 'uploaded_images/projects/'.$name;
+                array_push($gallery_file_array, $totalPathName);
+            }
+            $prev_gallery = unserialize(Project::where('id',$id)->first()->image360)?: [];
+            $projects['image360'] = serialize(array_merge($prev_gallery, $gallery_file_array));
+            DB::table('projects')->where('id','=',$id)->update($projects);
+        }
+
+        if (isset($request->removed_file)) {
+            $all_gallery_file=unserialize(DB::table('projects')->where('id','=',$id)->first()->image360)?: [];
+            $projects['image360'] = serialize(array_diff($all_gallery_file, $request->removed_file));
+            foreach ($request->removed_file as $removed_file){
+                try{
+                    unlink($removed_file);
+                }catch (\Exception $e){
+
+                }
+            }
+            DB::table('projects')->where('id','=',$id)->update($projects);
         }
 
         if ($request->hasFile('floorplan_file')) {

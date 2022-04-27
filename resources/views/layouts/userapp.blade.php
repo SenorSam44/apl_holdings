@@ -55,7 +55,7 @@
             background: black!important;
             overflow: visible!important;
             color: #CAA65B;
-        }
+        }l
         a{
             color: #CAA65B!important;
         }

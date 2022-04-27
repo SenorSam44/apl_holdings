@@ -154,8 +154,9 @@
                         <div class="col-lg-6">
                             <fieldset class="form-group">
                                 <select class="form-control bg-dark border-left-0 border-right-0 border-top-0"
+                                        required
                                         name="postID">
-                                    <option selected disabled>Select Post</option>
+                                    <option selected disabled value="">Select Post</option>
                                     @foreach($posts as $post)
                                         <option value="{{$post->id}}">{{$post->post_name}}</option>
                                     @endforeach

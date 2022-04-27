@@ -197,6 +197,45 @@
         </div>
 
         <div class="form-group">
+            <label class="control-label col-sm-2" for="visualization_video">Gallery Image:</label>
+            @if(isset($project->image360))
+                @foreach(unserialize($project->image360) as $gallery_file)
+                    <div class="dynamic-gallery-image col-sm-10 row">
+                        <img data-name="{{$gallery_file}}"
+                             class="col-sm-12 preview-image"
+                             src="{{asset($gallery_file)}}"
+                             alt="office logo preview" style="max-width: 100px; height: 100px; margin: 10px 0;"/>
+
+                        <div class="col-sm-10 text-right" style="padding: 0; margin: 4rem">
+                            <button type="button" class="remove-gallery-btn btn btn-danger color-white">
+                                Remove
+                            </button>
+                        </div>
+                        <input type="file" class="form-control col-sm-10" name="gallery_file[]"
+                               value="{{$gallery_file}}">
+                    </div>
+                @endforeach
+            @endif
+            <div class="dynamic-gallery-image col-sm-10 row" style="margin-top: 1em; padding: 0">
+                {{--                <img class="col-sm-12 preview-image"--}}
+                {{--                     src=""--}}
+                {{--                     alt="office logo preview" style="max-width: 100px; height: 100px; margin: 10px 0;"/>--}}
+
+                <div class="col-sm-12">
+                    <div class="col-sm-10" style="margin-bottom: 5px; padding: 0">
+                    </div>
+                    <div class="col-sm-2 text-right">
+                        <button type="button" class="add-gallery-btn btn btn-info color-white">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
             <label class="control-label col-sm-2" for="publication_status">Publication Status:</label>
             <div class="col-sm-10">
                 <select type="text" class="form-control" id="publication_status" name="publication_status">
@@ -216,5 +255,85 @@
 
     <!--- Include of Form validation code from Admin Error.blade.php-->
 
+    <style type="text/css">
+        .editable-image{
+            height: 60px;
+            width: 60px;
+        }
+
+        @media (min-width: 729px) {
+            .dynamic-gallery-image {
+                margin-left: 12.5vw;
+            }
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="{{ asset('backend') }}/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+        get_preview()
+        remove_btn_listener();
+
+        function remove_btn_listener() {
+
+            document.querySelectorAll('.remove-gallery-btn').forEach((removeBtn) => {
+                let parent_ele = removeBtn.parentElement.parentElement;
+                console.log(parent_ele)
+                let dataName = parent_ele.querySelector('img').getAttribute('data-name')
+
+                removeBtn.addEventListener('click', () => {
+                    parent_ele.remove();
+                    $('form').append('<input type="hidden" ' +
+                        'id="removed_file" name="removed_file[]" ' +
+                        'value="'+dataName+'">');
+                }, false)
+            })
+        }
+
+        function preview_none() {
+            document.querySelectorAll('.preview-image').forEach(preview => {
+                if (!preview.getAttribute('src')) {
+                    preview.style.display = 'none'
+                }
+            })
+        }
+
+        function get_preview() {
+            $(document).on('change', '.image-input', (ele) => {
+                var j = $(ele.target).parent().parent().find('.preview-image')
+                j.attr('src', URL.createObjectURL(ele.target.files[0]));
+                j.css('display', 'block')
+            })
+        }
+
+        $(document).ready(function (e) {
+            // get_preview();
+
+            //    add gallery image
+            let i = 0;
+            $('.add-gallery-btn').click((ele) => {
+                i++;
+
+                $(ele.target).parent().parent().append('<div class="dynamic-gallery-image gallery-field col-sm-12 row" style="margin: 5px 0; padding: 0">' +
+                    '               <div class="col-sm-12">' +
+                    '               <img class="preview-image"\n' +
+                    '                     src=""\n' +
+                    '                     alt="office logo preview" style="max-width: 100px; height: 100px; margin: 10px 0;"/>' +
+                    '               </div>' +
+                    '               <div class="col-sm-10" style="padding: 0">\n' +
+                    '                    <input type="file" class="image-input form-control" name="gallery_file[]">\n' +
+                    '                </div>' +
+                    '                <div class="col-sm-2 text-right" style="padding: 0">\n' +
+                    '                    <button type="button" class="remove-gallery-btn btn btn-danger color-white">\n' +
+                    '                        Remove\n' +
+                    '                    </button>\n' +
+                    '                </div>\n' +
+                    '               </div>')
+                preview_none()
+                remove_btn_listener()
+            });
+        });
+    </script>
 
 @endsection
